@@ -1,0 +1,564 @@
+.linkChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-cadetblue);
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.buttonIcon {
+  position: absolute;
+  height: 27.27%;
+  width: 36.36%;
+  top: 36.36%;
+  right: 31.82%;
+  bottom: 36.36%;
+  left: 31.82%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link,
+.profilePicIcon {
+  top: 0;
+  left: 0;
+  width: 2.75rem;
+}
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  height: 2.75rem;
+}
+.profilePicIcon {
+  border-radius: var(--br-16xl);
+  object-fit: cover;
+}
+.heading,
+.link1,
+.profilePicIcon {
+  position: absolute;
+  height: 2.75rem;
+}
+.link1 {
+  cursor: pointer;
+  text-decoration: none;
+  top: 0;
+  left: 18.188rem;
+  width: 2.75rem;
+}
+.heading {
+  top: 2.5rem;
+  left: 1.25rem;
+  width: 20.938rem;
+}
+.linkItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-cadetblue);
+  width: 3.375rem;
+  height: 3.375rem;
+}
+.adjustHorizontalAltIcon {
+  position: absolute;
+  top: 1.063rem;
+  left: 1.063rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+.link2,
+.searchBoxChild {
+  border: 0;
+  position: absolute;
+  top: 0;
+  height: 3.375rem;
+}
+.link2 {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  left: 17.563rem;
+  width: 3.375rem;
+}
+.searchBoxChild {
+  outline: 0;
+  background-color: var(--no-image);
+  left: 0;
+  border-radius: var(--br-mini);
+  width: 16.625rem;
+}
+.searchBox,
+.searchForTutors {
+  position: absolute;
+  left: 1.25rem;
+}
+.searchForTutors {
+  border: 0;
+  outline: 0;
+  font-family: var(--callout-medium);
+  font-size: var(--callout-medium-size);
+  background-color: transparent;
+  top: 1.188rem;
+  line-height: 1rem;
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.searchBox {
+  top: 7.125rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.showAll {
+  position: absolute;
+  top: 0.5rem;
+  left: 17.813rem;
+  line-height: 0.75rem;
+}
+.userCardChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--br-xl);
+  background-color: var(--no-image);
+  width: 16.25rem;
+  height: 10rem;
+}
+.michaelNdlovu,
+.profileIcon {
+  position: absolute;
+  left: 0.938rem;
+}
+.profileIcon {
+  top: 0.938rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.michaelNdlovu {
+  top: 3.688rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+}
+.financeAccounting,
+.johannesburgSouthAfrica {
+  position: absolute;
+  top: 7.563rem;
+  left: 0.938rem;
+  line-height: 0.75rem;
+  color: var(--color-darkgray-200);
+}
+.financeAccounting {
+  top: 5.75rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  text-align: left;
+}
+.likeBtnIcon {
+  position: absolute;
+  height: 17.5%;
+  width: 10.77%;
+  top: 12.5%;
+  right: 7.69%;
+  bottom: 70%;
+  left: 81.54%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.userCard {
+  position: absolute;
+  top: 0;
+  left: 17.125rem;
+  width: 16.25rem;
+  height: 10rem;
+}
+.profileIcon1,
+.profileIconChild {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.profileIconChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-smi);
+  background-color: var(--color-aliceblue-200);
+}
+.profileIcon1 {
+  top: 0.938rem;
+  left: 0.938rem;
+}
+.capeTownSouth,
+.emilyMokoena {
+  position: absolute;
+  top: 3.813rem;
+  left: 0.813rem;
+  line-height: 0.75rem;
+}
+.capeTownSouth {
+  top: 7.563rem;
+  left: 0.938rem;
+}
+.popularTutorsSlider,
+.userCard1 {
+  position: absolute;
+  left: 0;
+  height: 10rem;
+}
+.userCard1 {
+  top: 0;
+  width: 16.25rem;
+}
+.popularTutorsSlider {
+  top: 2.5rem;
+  width: 33.375rem;
+  text-align: center;
+}
+.popularTutors {
+  position: absolute;
+  top: 12.375rem;
+  left: 1.25rem;
+  width: 33.375rem;
+  height: 12.5rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}
+.recentTutors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--font-size-xl);
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.showAll1 {
+  position: absolute;
+  top: 0.5rem;
+  left: 17.813rem;
+  font-size: var(--font-size-xs);
+  line-height: 0.75rem;
+}
+.recentUserListChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
+  border-radius: var(--br-xl);
+  background-color: var(--no-image);
+  width: 20.938rem;
+  height: 5rem;
+}
+.facebook,
+.facebookChild {
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.facebookChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-steelblue);
+}
+.facebook {
+  top: 0.938rem;
+  left: 0.938rem;
+}
+.sarahDlamini {
+  position: absolute;
+  top: 1.25rem;
+  left: 5.313rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.marketingAdvertising,
+.peerMentor {
+  position: absolute;
+  top: 2.875rem;
+  left: 5.313rem;
+  font-size: var(--font-size-3xs);
+  line-height: 0.75rem;
+}
+.peerMentor {
+  top: 2.125rem;
+  left: 15.625rem;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+.recentUserList {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 20.938rem;
+  height: 5rem;
+}
+.spotifyChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-honeydew-100);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.avatarIcon {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.industryExpert {
+  position: absolute;
+  top: 2.125rem;
+  left: 14.625rem;
+  font-size: var(--font-size-xs);
+  line-height: 0.75rem;
+  font-weight: 500;
+}
+.recentUserList1 {
+  position: absolute;
+  top: 8.75rem;
+  left: 0;
+  width: 20.938rem;
+  height: 5rem;
+}
+.spotifyItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gray-700);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.seniorMentor {
+  position: absolute;
+  top: 2.125rem;
+  left: 15.063rem;
+  font-size: var(--font-size-xs);
+  line-height: 0.75rem;
+  font-weight: 500;
+}
+.recent,
+.recentUserList2 {
+  position: absolute;
+  width: 20.938rem;
+}
+.recentUserList2 {
+  top: 15rem;
+  left: 0;
+  height: 5rem;
+}
+.recent {
+  top: 26.75rem;
+  left: 1.25rem;
+  height: 20rem;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}
+.navigationChild,
+.shadow {
+  position: absolute;
+  width: 23.438rem;
+}
+.shadow {
+  top: 3rem;
+  left: 23.438rem;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 41, 0.07),
+    rgba(196, 196, 196, 0)
+  );
+  height: 3rem;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.navigationChild {
+  top: 1.375rem;
+  left: 0;
+  border-radius: var(--br-11xl-5) var(--br-11xl-5) 0 0;
+  background-color: var(--no-image);
+  height: 4.375rem;
+}
+.menuIndicatorIcon {
+  position: absolute;
+  top: 4.938rem;
+  left: 3.063rem;
+  width: 1rem;
+  height: 0.813rem;
+  object-fit: contain;
+}
+.chatIcon,
+.linkIcon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.linkIcon {
+  position: absolute;
+  height: 21.74%;
+  width: 5.07%;
+  top: 45.65%;
+  right: 82%;
+  bottom: 32.61%;
+  left: 12.93%;
+}
+.chatIcon {
+  height: 54.05%;
+  width: 37.04%;
+  top: 0;
+  right: 29.63%;
+  bottom: 45.95%;
+  left: 33.33%;
+}
+.chatIcon,
+.link3,
+.message {
+  position: absolute;
+}
+.message {
+  top: 1.563rem;
+  left: 0;
+  font-size: var(--font-size-xs);
+  line-height: 0.75rem;
+  font-family: var(--callout-medium);
+  color: var(--color-darkgray-100);
+  text-align: left;
+}
+.link3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 40.22%;
+  width: 14.4%;
+  top: 45.65%;
+  right: 52.8%;
+  bottom: 14.13%;
+  left: 32.8%;
+}
+.settingIcon {
+  height: 54.05%;
+  width: 45.24%;
+  top: 0;
+  right: 26.19%;
+  bottom: 45.95%;
+  left: 28.57%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link4,
+.setting,
+.settingIcon {
+  position: absolute;
+}
+.setting {
+  top: 1.563rem;
+  left: 0;
+  font-size: var(--font-size-xs);
+  line-height: 0.75rem;
+  font-family: var(--callout-medium);
+  color: #e5e5e5;
+  text-align: left;
+}
+.link4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 40.22%;
+  width: 11.2%;
+  top: 45.65%;
+  right: 10.4%;
+  bottom: 14.13%;
+  left: 78.4%;
+}
+.profileIcon2 {
+  position: absolute;
+  height: 54.05%;
+  width: 43.24%;
+  top: 0;
+  right: 27.03%;
+  bottom: 45.95%;
+  left: 29.73%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link5 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  height: 40.22%;
+  width: 9.87%;
+  top: 45.65%;
+  right: 32.27%;
+  bottom: 14.13%;
+  left: 57.87%;
+}
+.navigation {
+  position: absolute;
+  top: 45rem;
+  left: 0;
+  width: 23.438rem;
+  height: 5.75rem;
+}
+.avatarIcon1,
+.avatarIcon2,
+.avatarIcon3,
+.avatarIcon4 {
+  position: absolute;
+  top: 16rem;
+  left: 2.344rem;
+  width: 2.188rem;
+  height: 2.188rem;
+  object-fit: cover;
+}
+.avatarIcon2,
+.avatarIcon3,
+.avatarIcon4 {
+  top: 15.938rem;
+  left: 19.5rem;
+  border-radius: 50%;
+}
+.avatarIcon3,
+.avatarIcon4 {
+  top: 30.5rem;
+  left: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.avatarIcon4 {
+  top: 43rem;
+}
+.home {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+}

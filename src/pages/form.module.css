@@ -1,0 +1,305 @@
+.headerIcon {
+  position: absolute;
+  top: 2.5rem;
+  left: calc(50% - 167.5px);
+  width: 16.75rem;
+  height: 1.875rem;
+  object-fit: contain;
+}
+.firstChild {
+  border: 0.5px solid var(--color-gainsboro-100);
+  outline: 0;
+  background-color: var(--no-image);
+  position: absolute;
+  height: 66.67%;
+  width: 100%;
+  top: 33.33%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-4xs);
+  box-sizing: border-box;
+}
+.input {
+  position: absolute;
+  top: 57.69%;
+  left: 7.69%;
+  line-height: 0.875rem;
+  font-weight: 500;
+}
+.firstName {
+  border: 0;
+  outline: 0;
+  font-family: var(--callout-medium);
+  font-size: var(--callout-medium-size);
+  background-color: transparent;
+  top: 0;
+  left: 0.313rem;
+  line-height: 1rem;
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.first,
+.firstName,
+.input1 {
+  position: absolute;
+}
+.first {
+  height: 9.61%;
+  width: 38.13%;
+  top: 13.55%;
+  right: 56.53%;
+  bottom: 76.85%;
+  left: 5.33%;
+}
+.input1 {
+  top: 57.69%;
+  left: 5.97%;
+  line-height: 0.875rem;
+}
+.yourEmail {
+  top: 0;
+  left: 0;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  color: var(--color-dimgray);
+}
+.emai,
+.input2,
+.yourEmail {
+  position: absolute;
+}
+.emai {
+  height: 9.61%;
+  width: 89.33%;
+  top: 26.85%;
+  right: 5.33%;
+  bottom: 63.55%;
+  left: 5.33%;
+}
+.input2 {
+  top: 57.69%;
+  left: 4.18%;
+  line-height: 0.875rem;
+}
+.buttonIcon {
+  position: absolute;
+  top: 3rem;
+  left: 18.875rem;
+  width: 0.813rem;
+  height: 0.438rem;
+  object-fit: contain;
+}
+.country,
+.inputChild {
+  position: absolute;
+  height: 9.61%;
+  width: 89.33%;
+  top: 40.15%;
+  right: 5.33%;
+  bottom: 50.25%;
+  left: 5.33%;
+}
+.inputChild {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-4xs);
+  background-color: var(--no-image);
+}
+.input4 {
+  position: absolute;
+  height: 82.82%;
+  width: 89.55%;
+  top: 8.55%;
+  left: 5.97%;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+.input3,
+.message1 {
+  position: absolute;
+  left: 0;
+}
+.input3 {
+  height: 81.65%;
+  width: 100%;
+  top: 18.35%;
+  right: 0;
+  bottom: 0;
+}
+.message1 {
+  top: 0;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-family: var(--callout-medium);
+  color: var(--color-dimgray);
+  display: inline-block;
+  width: 4.563rem;
+  height: 0.981rem;
+}
+.message {
+  position: absolute;
+  height: 17.12%;
+  width: 89.33%;
+  top: 53.82%;
+  right: 5.33%;
+  bottom: 29.06%;
+  left: 5.33%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  font-family: var(--font-overpass);
+}
+.inputItem,
+.uploadHere {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.inputItem {
+  border: 0.5px solid var(--color-gainsboro-100);
+  outline: 0;
+  background-color: var(--no-image);
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-4xs);
+  box-sizing: border-box;
+}
+.uploadHere {
+  line-height: 0.875rem;
+  font-weight: 500;
+}
+.icon {
+  position: absolute;
+  height: 36.84%;
+  width: 12.64%;
+  top: 63.16%;
+  right: 43.68%;
+  bottom: 0;
+  left: 43.68%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.uploadHereParent {
+  position: absolute;
+  top: 1rem;
+  left: 7.875rem;
+  width: 5.438rem;
+  height: 2.375rem;
+}
+.cvoptional,
+.input5 {
+  position: absolute;
+  left: 0;
+}
+.input5 {
+  height: 72.92%;
+  width: 100%;
+  top: 27.08%;
+  right: 0;
+  bottom: 0;
+}
+.cvoptional {
+  top: 0;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  text-align: left;
+}
+.cv {
+  height: 11.82%;
+  width: 89.33%;
+  top: 74.63%;
+  right: 5.33%;
+  bottom: 13.55%;
+  left: 5.33%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-dimgray);
+}
+.cv,
+.lastName,
+.lastName1 {
+  position: absolute;
+  font-family: var(--callout-medium);
+}
+.lastName {
+  border: 0.5px solid var(--color-gainsboro-100);
+  outline: 0;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  background-color: var(--no-image);
+  height: 6.4%;
+  width: 38.13%;
+  top: 16.75%;
+  right: 5.33%;
+  bottom: 76.85%;
+  left: 56.53%;
+  border-radius: var(--br-4xs);
+  box-sizing: border-box;
+  padding: var(--padding-lgi) 0.812rem;
+  color: var(--color-gray-500);
+}
+.lastName1 {
+  top: 0;
+  left: 12rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.button1,
+.buttonChild {
+  position: absolute;
+  left: 0;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.buttonChild {
+  top: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-cadetblue);
+}
+.button1 {
+  top: 38.688rem;
+}
+.applyNow {
+  position: absolute;
+  top: 39.875rem;
+  left: 7.75rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
+  font-family: var(--callout-medium);
+  color: var(--no-image);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 6.875rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 42.063rem;
+}
+.form {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  font-family: var(--callout-medium);
+}

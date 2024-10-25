@@ -1,0 +1,246 @@
+.headerIcon {
+  position: absolute;
+  top: 2.5rem;
+  left: 1.25rem;
+  width: 14.875rem;
+  height: 1.875rem;
+  object-fit: contain;
+}
+.yourApplications {
+  position: absolute;
+  top: 6.875rem;
+  left: 1.25rem;
+  font-size: var(--font-size-5xl);
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--color-gray-500);
+}
+.facebookChild,
+.facebookItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.facebookChild {
+  box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
+  border-radius: var(--br-xs);
+  background-color: var(--no-image);
+  width: 20.938rem;
+  height: 9.688rem;
+}
+.facebookItem {
+  border-radius: var(--br-mini);
+  background-color: var(--color-steelblue);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.icon {
+  position: absolute;
+  top: 0.731rem;
+  left: 1.144rem;
+  width: 0.831rem;
+  height: 1.6rem;
+  overflow: hidden;
+}
+.thaboMthembu {
+  position: absolute;
+  top: 2.563rem;
+  left: 5.625rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.capeTown,
+.uiuxDesignMentor {
+  position: absolute;
+  left: 5.625rem;
+  font-size: var(--font-size-xs);
+}
+.uiuxDesignMentor {
+  top: 1.375rem;
+  line-height: 120%;
+}
+.capeTown {
+  top: 4.188rem;
+  line-height: 0.75rem;
+}
+.buttonIcon {
+  position: absolute;
+  top: 1.563rem;
+  left: 18.438rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+.button,
+.button1 {
+  position: absolute;
+  width: 8.438rem;
+  height: 2.188rem;
+}
+.button1 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: #e6edff;
+}
+.button {
+  top: 6.25rem;
+  left: 1.5rem;
+}
+.delivered {
+  top: 6.813rem;
+  left: 3.375rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-steelblue);
+}
+.delivered,
+.facebook,
+.free {
+  position: absolute;
+}
+.free {
+  top: 6.688rem;
+  right: 1.188rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-steelblue);
+}
+.facebook {
+  top: 9.625rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 9.688rem;
+}
+.facebookInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-pink-100);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.icon1 {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  top: 18%;
+  right: 20%;
+  bottom: 22%;
+  left: 20%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.buttonChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-pink-100);
+  width: 8.438rem;
+  height: 2.188rem;
+}
+.delivered1,
+.free1 {
+  position: absolute;
+  top: 6.875rem;
+  left: 3.563rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-hotpink);
+}
+.free1 {
+  top: 6.75rem;
+  left: 17.563rem;
+}
+.dribble,
+.facebookIcon,
+.googleItem {
+  position: absolute;
+  top: 20.563rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 9.688rem;
+}
+.facebookIcon,
+.googleItem {
+  top: 1.563rem;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.googleItem {
+  top: 6.25rem;
+  left: 1.5rem;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gray-200);
+  width: 8.438rem;
+  height: 2.188rem;
+}
+.free2,
+.pending {
+  position: absolute;
+  top: 6.813rem;
+  left: 3.625rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-dodgerblue);
+}
+.free2 {
+  top: 6.5rem;
+  left: 17.563rem;
+}
+.google,
+.shopifyItem {
+  position: absolute;
+  top: 31.5rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 9.688rem;
+}
+.shopifyItem {
+  top: 6.25rem;
+  left: 1.5rem;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-honeydew-200);
+  width: 8.438rem;
+  height: 2.188rem;
+}
+.pending1 {
+  top: 6.813rem;
+  left: 3.625rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-limegreen);
+}
+.free3,
+.pending1,
+.shopify {
+  position: absolute;
+}
+.free3 {
+  top: 6.813rem;
+  left: 17.563rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-limegreen);
+}
+.shopify {
+  top: 42.438rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 9.688rem;
+}
+.applications {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}

@@ -1,0 +1,251 @@
+.registerAccount {
+  position: absolute;
+  top: 6.25rem;
+  left: 1.875rem;
+  font-size: var(--font-size-11xl);
+  line-height: 1.875rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.fillYourDetails {
+  position: absolute;
+  top: 8.75rem;
+  left: 1.875rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  width: 14.313rem;
+}
+.emailChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--no-image);
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.emailAddress {
+  border: 0;
+  outline: 0;
+  font-family: var(--callout-medium);
+  font-size: var(--callout-medium-size);
+  background-color: transparent;
+  position: absolute;
+  top: 1.063rem;
+  left: 3.438rem;
+  line-height: 130%;
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.email,
+.messageIcon {
+  position: absolute;
+  left: 1.25rem;
+}
+.messageIcon {
+  top: 1.063rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  overflow: hidden;
+}
+.email {
+  top: 18.5rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.unionIcon {
+  position: absolute;
+  height: 40.74%;
+  width: 5.97%;
+  top: 35.19%;
+  right: 88.06%;
+  bottom: 24.07%;
+  left: 5.97%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.name {
+  position: absolute;
+  top: 13.625rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.eyeSlashIcon,
+.lockIcon {
+  position: absolute;
+  top: 1.313rem;
+  left: 18.625rem;
+  width: 1.025rem;
+  height: 0.813rem;
+}
+.lockIcon {
+  top: 0.75rem;
+  left: 1.25rem;
+  width: 1.25rem;
+  height: 1.625rem;
+}
+.linkChild,
+.password {
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.password {
+  position: absolute;
+  top: 23.375rem;
+  left: 1.25rem;
+}
+.linkChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-cadetblue);
+}
+.link,
+.linkChild,
+.signUp1 {
+  position: absolute;
+}
+.signUp1 {
+  top: 1.188rem;
+  left: 8.5rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  color: var(--no-image);
+  text-align: center;
+}
+.link {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 29.25rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.logIn {
+  font-weight: 500;
+  color: var(--color-gray-500);
+}
+.alreadyHaveAccountContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.625rem;
+}
+.link1 {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 44.25rem;
+  left: 4.375rem;
+  width: 14.813rem;
+  height: 1.625rem;
+  text-align: center;
+  color: inherit;
+}
+.chevronLeftIcon,
+.link2 {
+  position: absolute;
+  width: 1.313rem;
+  height: 0.656rem;
+}
+.chevronLeftIcon {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+}
+.link2 {
+  cursor: pointer;
+  text-decoration: none;
+  top: 3.813rem;
+  left: 2.531rem;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+.orContinueWith {
+  position: absolute;
+  top: 0;
+  left: 1.875rem;
+  line-height: 1rem;
+}
+.orChild,
+.orItem {
+  position: absolute;
+  top: 0.438rem;
+  left: -0.062rem;
+  border-top: 2px solid var(--color-darkgray-200);
+  box-sizing: border-box;
+  width: 1.375rem;
+  height: 0.125rem;
+}
+.orItem {
+  left: 10.813rem;
+}
+.linkItem {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-aliceblue-100);
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.icon,
+.link3,
+.linkItem {
+  position: absolute;
+}
+.icon {
+  top: 0.813rem;
+  left: 0.813rem;
+  width: 2.125rem;
+  height: 2.125rem;
+  overflow: hidden;
+}
+.link3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.facebookIcon,
+.or,
+.social {
+  position: absolute;
+  top: 0.875rem;
+  left: 6.375rem;
+  width: 1rem;
+  height: 1.919rem;
+}
+.or,
+.social {
+  top: 2.063rem;
+  left: 4.5rem;
+  width: 7.375rem;
+  height: 3.75rem;
+}
+.or {
+  top: 35.125rem;
+  left: 5.688rem;
+  width: 12.125rem;
+  height: 5.813rem;
+}
+.signUp {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}

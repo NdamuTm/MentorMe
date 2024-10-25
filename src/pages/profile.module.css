@@ -1,0 +1,187 @@
+.profileChild {
+  position: absolute;
+  top: 6.875rem;
+  left: 9.25rem;
+  border-radius: var(--br-36xl);
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+.oval {
+  position: absolute;
+  height: 2.46%;
+  width: 5.33%;
+  top: 21.24%;
+  right: 40.93%;
+  bottom: 76.29%;
+  left: 53.73%;
+  border-radius: 50%;
+  background-color: var(--color-cadetblue);
+  border: 1px solid #f8f8f8;
+  box-sizing: border-box;
+}
+.fill244Icon {
+  position: relative;
+  width: 0.394rem;
+  height: 0.369rem;
+}
+.editProfile,
+.ndamuleloRasendedza {
+  position: absolute;
+  font-family: var(--callout-medium);
+}
+.ndamuleloRasendedza {
+  top: 13.125rem;
+  left: calc(50% - 147.5px);
+  font-size: var(--font-size-5xl);
+  line-height: 1.875rem;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  white-space: pre-wrap;
+}
+.editProfile {
+  top: 15.625rem;
+  left: 9.438rem;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+}
+.headerIcon {
+  top: 2.5rem;
+  left: 1.25rem;
+  width: 12.438rem;
+  height: 1.875rem;
+  object-fit: contain;
+}
+.headerIcon,
+.input,
+.name {
+  position: absolute;
+}
+.input {
+  border: 0.5px solid var(--color-gainsboro-100);
+  outline: 0;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  font-size: var(--font-size-sm);
+  background-color: var(--no-image);
+  height: 66.67%;
+  width: 100%;
+  top: 33.33%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-4xs);
+  box-sizing: border-box;
+  padding: var(--padding-lgi) var(--padding-xl);
+  color: var(--color-gray-500);
+}
+.name {
+  height: 9.61%;
+  width: 89.33%;
+  top: 37.44%;
+  right: 5.33%;
+  bottom: 52.96%;
+  left: 5.33%;
+}
+.yourEmail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1rem;
+}
+.emai,
+.inputChild {
+  position: absolute;
+  height: 9.61%;
+  width: 89.33%;
+  top: 50.74%;
+  right: 5.33%;
+  bottom: 39.66%;
+  left: 5.33%;
+}
+.inputChild {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-4xs);
+  background-color: var(--no-image);
+  border: 0.5px solid var(--color-gainsboro-100);
+  box-sizing: border-box;
+}
+.text {
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  font-size: var(--font-size-sm);
+  background-color: transparent;
+  position: absolute;
+  top: 36.54%;
+  left: 5.97%;
+  line-height: 0.875rem;
+  color: var(--color-gray-500);
+  text-align: left;
+}
+.input2,
+.password {
+  position: absolute;
+  height: 66.67%;
+  width: 100%;
+  top: 33.33%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.password {
+  height: 9.61%;
+  width: 89.33%;
+  top: 64.04%;
+  right: 5.33%;
+  bottom: 26.35%;
+  left: 5.33%;
+}
+.buttonChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-cadetblue);
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.saveNow {
+  position: absolute;
+  top: 1.188rem;
+  left: 8rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
+  font-family: var(--callout-medium);
+  color: var(--no-image);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 40.5rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.profile {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--font-sofia-pro);
+}

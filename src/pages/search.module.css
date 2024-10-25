@@ -1,0 +1,376 @@
+.buttonChild,
+.headerIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headerIcon {
+  width: 12.688rem;
+  height: 1.875rem;
+  object-fit: contain;
+}
+.buttonChild {
+  border-radius: var(--br-mini);
+  background-color: var(--color-cadetblue);
+  width: 3.375rem;
+  height: 3.375rem;
+}
+.adjustHorizontalAltIcon {
+  position: absolute;
+  top: 1.063rem;
+  left: 1.063rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+.button,
+.input,
+.searchBox {
+  position: absolute;
+  height: 3.375rem;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  left: 17.563rem;
+  width: 3.375rem;
+}
+.input,
+.searchBox {
+  left: 0;
+}
+.input {
+  border: 0;
+  outline: 0;
+  font-family: var(--callout-medium);
+  font-size: var(--callout-medium-size);
+  background-color: var(--no-image);
+  top: 0;
+  border-radius: var(--br-mini);
+  width: 16.625rem;
+  padding: var(--padding-lgi) var(--padding-xl);
+  box-sizing: border-box;
+  color: var(--color-gray-300);
+}
+.searchBox {
+  top: 3.375rem;
+  width: 20.938rem;
+}
+.availableMentors {
+  position: absolute;
+  top: 7.875rem;
+  left: 0;
+  font-size: var(--callout-medium-size);
+  color: var(--color-gray-500);
+}
+.buttonItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xs);
+  background-color: var(--color-cadetblue);
+  width: 8.75rem;
+  height: 3.125rem;
+}
+.mostRelevent {
+  position: absolute;
+  top: 1.125rem;
+  left: 1.313rem;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  color: var(--no-image);
+  text-align: left;
+}
+.button1,
+.buttonInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8.75rem;
+  height: 3.125rem;
+}
+.button1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.buttonInner {
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray-200);
+}
+.mostRecent {
+  position: absolute;
+  top: 1.125rem;
+  left: 1.688rem;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.button2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 9.688rem;
+  width: 8.75rem;
+  height: 3.125rem;
+}
+.fbChild,
+.most {
+  position: absolute;
+  left: 0;
+}
+.most {
+  top: 10.25rem;
+  width: 18.438rem;
+  height: 3.125rem;
+}
+.fbChild {
+  top: 0;
+  box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
+  border-radius: var(--br-xl);
+  background-color: var(--no-image);
+  width: 20.938rem;
+  height: 6.25rem;
+}
+.facebook,
+.facebookChild {
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.facebookChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-steelblue);
+}
+.facebook {
+  top: 1.563rem;
+  left: 1.25rem;
+}
+.thaboMthembu {
+  position: absolute;
+  top: 2.438rem;
+  left: 5.625rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.capeTown,
+.uiuxDesign {
+  position: absolute;
+  top: 1.375rem;
+  left: 5.625rem;
+  line-height: 0.75rem;
+}
+.uiuxDesign {
+  top: 4.188rem;
+}
+.ellipseIcon,
+.path3392Icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.path3392Icon {
+  height: 49.29%;
+  width: 53.93%;
+  top: 28.57%;
+  right: 24.64%;
+  bottom: 22.14%;
+  left: 21.43%;
+}
+.button3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  height: 28%;
+  width: 8.36%;
+  top: 12%;
+  right: 3.58%;
+  bottom: 60%;
+  left: 88.06%;
+}
+.facebookItem,
+.fb {
+  position: absolute;
+  left: 0;
+}
+.fb {
+  top: 14.625rem;
+  width: 20.938rem;
+  height: 6.25rem;
+}
+.facebookItem {
+  top: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-pink-100);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.div {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  overflow: hidden;
+}
+.aneleNdlovu {
+  position: absolute;
+  top: 2.5rem;
+  left: 5.625rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.dribbble {
+  position: absolute;
+  top: 22.125rem;
+  left: 0;
+  width: 20.938rem;
+  height: 6.25rem;
+}
+.facebookInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gray-200);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.google {
+  top: 29.625rem;
+  width: 20.938rem;
+  height: 6.25rem;
+}
+.google,
+.rectangleDiv,
+.shopify {
+  position: absolute;
+  left: 0;
+}
+.rectangleDiv {
+  top: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-honeydew-200);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.shopify {
+  top: 37.125rem;
+  width: 20.938rem;
+  height: 6.25rem;
+}
+.facebookChild1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gray-700);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.siphoKhumalo {
+  position: absolute;
+  top: 2.438rem;
+  left: 5.625rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
+}
+.bloemfontein,
+.visualDesign1 {
+  position: absolute;
+  top: 1.375rem;
+  left: 5.625rem;
+  line-height: 0.75rem;
+  color: var(--color-dimgray);
+}
+.visualDesign1 {
+  top: 4.125rem;
+  color: var(--color-darkgray-200);
+}
+.netflix {
+  position: absolute;
+  top: 44.313rem;
+  left: 0;
+  width: 20.938rem;
+  height: 6.25rem;
+  opacity: 0.5;
+  color: var(--color-gray-500);
+}
+.avatarIcon,
+.avatarIcon1,
+.avatarIcon2 {
+  position: absolute;
+  top: 31.5rem;
+  left: 1.563rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.avatarIcon1,
+.avatarIcon2 {
+  top: 39rem;
+}
+.avatarIcon2 {
+  top: 46.188rem;
+}
+.headerParent {
+  position: absolute;
+  top: 2.5rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 50.563rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}
+.avatarIcon3,
+.avatarIcon4 {
+  position: absolute;
+  top: 19rem;
+  left: 2.813rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.avatarIcon4 {
+  top: 26.5rem;
+}
+.search {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+}

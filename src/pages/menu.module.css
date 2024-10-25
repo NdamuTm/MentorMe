@@ -1,0 +1,170 @@
+.menuChild,
+.ndamulelo {
+  position: absolute;
+  left: 1.875rem;
+}
+.menuChild {
+  top: 6.25rem;
+  border-radius: var(--br-36xl);
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+.ndamulelo {
+  top: 12.5rem;
+  font-size: var(--font-size-11xl);
+  line-height: 1.875rem;
+  font-weight: 500;
+}
+.hellobesnikgmailcom {
+  position: absolute;
+  top: 15rem;
+  left: 1.875rem;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.iconLogout {
+  height: 100%;
+  width: 33.96%;
+  top: 0;
+  right: 66.04%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.iconLogout,
+.link,
+.logout {
+  position: absolute;
+}
+.logout {
+  top: calc(50% - 12px);
+  left: 48.11%;
+}
+.link {
+  height: 4.43%;
+  width: 28.27%;
+  top: 83.25%;
+  right: 63.73%;
+  bottom: 12.32%;
+  left: 8%;
+}
+.notificationsSettin {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 23.18%;
+}
+.iconSettings {
+  position: absolute;
+  height: 100%;
+  width: 16.36%;
+  top: 0;
+  right: 83.64%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link1 {
+  position: absolute;
+  width: 58.67%;
+  top: calc(50% + 26px);
+  right: 33.33%;
+  left: 8%;
+  height: 2.25rem;
+}
+.span {
+  color: var(--color-dimgray);
+}
+.transactionHistory {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 28.33%;
+}
+.iconHistory {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  top: 0;
+  right: 80%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link2 {
+  position: absolute;
+  width: 48%;
+  top: calc(50% - 40px);
+  right: 44%;
+  left: 8%;
+  height: 2.25rem;
+}
+.editProfile {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 38.35%;
+}
+.iconUser {
+  position: absolute;
+  height: 100%;
+  width: 27.07%;
+  top: 0;
+  right: 72.93%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.link3 {
+  position: absolute;
+  width: 35.47%;
+  top: calc(50% - 106px);
+  right: 56.53%;
+  left: 8%;
+  height: 2.25rem;
+}
+.favoriteOutfits26 {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 38.06%;
+}
+.iconHeart {
+  position: absolute;
+  height: 100%;
+  width: 26.87%;
+  top: 0;
+  right: 73.13%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.link4 {
+  position: absolute;
+  width: 35.73%;
+  top: calc(50% + 92px);
+  right: 56.27%;
+  left: 8%;
+  height: 2.25rem;
+}
+.menu {
+  width: 100%;
+  position: relative;
+  background-color: var(--no-image);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-gray-500);
+  font-family: var(--callout-medium);
+}

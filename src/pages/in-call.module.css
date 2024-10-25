@@ -1,0 +1,94 @@
+.inCallChild {
+  position: absolute;
+  top: 0;
+  left: -2.125rem;
+  width: 27.688rem;
+  height: 50.75rem;
+  object-fit: cover;
+}
+.buttonIcon {
+  position: absolute;
+  top: 0;
+  left: 5.438rem;
+  width: 2.938rem;
+  height: 2.938rem;
+}
+.buttonIcon1,
+.buttonIcon2 {
+  position: absolute;
+  width: 2.875rem;
+  height: 2.875rem;
+}
+.buttonIcon1 {
+  top: 0.063rem;
+  left: 0;
+}
+.buttonIcon2 {
+  top: 0;
+  left: 10.875rem;
+}
+.controlPanel,
+.inCallItem {
+  position: absolute;
+  top: 43.438rem;
+  left: 4.875rem;
+  width: 13.75rem;
+  height: 2.938rem;
+}
+.inCallItem {
+  top: 2.5rem;
+  left: 17.438rem;
+  border-radius: var(--br-xl);
+  width: 4.75rem;
+  height: 7.188rem;
+  object-fit: cover;
+}
+.buttonIcon3 {
+  position: absolute;
+  top: 8.625rem;
+  left: 18.813rem;
+  width: 2rem;
+  height: 2rem;
+}
+.darleneRobertson,
+.div {
+  position: absolute;
+  font-weight: 500;
+}
+.div {
+  top: 1.563rem;
+  left: 3.688rem;
+  line-height: 1.25rem;
+}
+.darleneRobertson {
+  top: 0;
+  left: 0;
+  font-size: var(--callout-medium-size);
+  line-height: 1.313rem;
+}
+.additionalInformaion,
+.buttonIcon4 {
+  position: absolute;
+  top: 36.188rem;
+  left: 7.125rem;
+  width: 9.375rem;
+  height: 2.813rem;
+}
+.buttonIcon4 {
+  top: 2.5rem;
+  left: 1.25rem;
+  width: 0.656rem;
+  height: 1.313rem;
+  object-fit: contain;
+}
+.inCall {
+  width: 100%;
+  position: relative;
+  background-color: #94b4c0;
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--footnote-semibold-size);
+  color: var(--no-image);
+  font-family: var(--callout-medium);
+}

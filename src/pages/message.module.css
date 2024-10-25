@@ -1,0 +1,479 @@
+.navigationChild,
+.shadow {
+  position: absolute;
+  width: 23.438rem;
+}
+.shadow {
+  top: 3rem;
+  left: 23.438rem;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 21, 41, 0.07),
+    rgba(196, 196, 196, 0)
+  );
+  height: 3rem;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+}
+.navigationChild {
+  top: 1.375rem;
+  left: 0;
+  border-radius: var(--br-11xl-5) var(--br-11xl-5) 0 0;
+  background-color: var(--no-image);
+  height: 4.375rem;
+}
+.navigationItem {
+  top: 4.938rem;
+  left: 8.938rem;
+  width: 1rem;
+  height: 0.813rem;
+  object-fit: contain;
+}
+.home,
+.homeIcon,
+.navigationItem {
+  position: absolute;
+}
+.homeIcon {
+  height: 54.05%;
+  width: 52.78%;
+  top: 0;
+  right: 22.22%;
+  bottom: 45.95%;
+  left: 25%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.home {
+  top: 1.563rem;
+  left: 0;
+  line-height: 0.75rem;
+}
+.link,
+.linkIcon,
+.profileIcon {
+  position: absolute;
+  height: 40.22%;
+  width: 9.6%;
+  top: 45.65%;
+  right: 79.2%;
+  bottom: 14.13%;
+  left: 11.2%;
+}
+.linkIcon,
+.profileIcon {
+  height: 21.74%;
+  width: 5.33%;
+  right: 57.07%;
+  bottom: 32.61%;
+  left: 37.6%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.profileIcon {
+  height: 54.05%;
+  width: 43.24%;
+  top: 0;
+  right: 27.03%;
+  bottom: 45.95%;
+  left: 29.73%;
+}
+.link1,
+.settingIcon {
+  position: absolute;
+  height: 40.22%;
+  width: 9.87%;
+  top: 45.65%;
+  right: 32%;
+  bottom: 14.13%;
+  left: 58.13%;
+}
+.settingIcon {
+  height: 54.05%;
+  width: 45.24%;
+  top: 0;
+  right: 26.19%;
+  bottom: 45.95%;
+  left: 28.57%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.link2 {
+  position: absolute;
+  height: 40.22%;
+  width: 11.2%;
+  top: 45.65%;
+  right: 9.87%;
+  bottom: 14.13%;
+  left: 78.93%;
+}
+.navigation {
+  position: absolute;
+  top: 45rem;
+  left: 0;
+  width: 23.438rem;
+  height: 5.75rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-darkgray-100);
+  font-family: var(--callout-medium);
+}
+.message1 {
+  position: absolute;
+  top: 0;
+  left: 7.5rem;
+  font-weight: 500;
+}
+.linkIcon1,
+.linkIcon2 {
+  position: absolute;
+  object-fit: cover;
+  transform: rotate(90deg);
+}
+.linkIcon1 {
+  top: 0.25rem;
+  left: 0;
+  width: 1.313rem;
+  height: 0.656rem;
+}
+.linkIcon2 {
+  height: 7.16%;
+  top: 0.9%;
+  right: -19.062rem;
+  bottom: 91.94%;
+  max-height: 100%;
+  width: 1.5rem;
+  overflow: hidden;
+}
+.header {
+  position: absolute;
+  top: 4.375rem;
+  left: 22.188rem;
+  width: 1.875rem;
+  height: 20.938rem;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  font-size: var(--font-size-xl);
+}
+.rozanneBarrientes {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 16.42%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 16.42%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.notificationChild {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-cadetblue);
+  width: 1.5rem;
+}
+.div1,
+.notification,
+.notificationChild {
+  position: absolute;
+  height: 1.5rem;
+}
+.div1 {
+  width: 100%;
+  top: calc(50% - 12px);
+  left: 0;
+  line-height: 0.625rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notification {
+  top: 0.625rem;
+  left: 19.438rem;
+  width: 1.5rem;
+  text-align: center;
+  font-size: var(--font-size-3xs);
+  color: var(--no-image);
+  font-family: var(--font-sofia-pro);
+}
+.avatarIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+.div {
+  width: 89.33%;
+  top: calc(50% - 296px);
+  right: 5.33%;
+  left: 5.33%;
+}
+.avatarIcon1,
+.div,
+.div2 {
+  position: absolute;
+  height: 2.5rem;
+}
+.avatarIcon1 {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 2.5rem;
+  object-fit: cover;
+}
+.div2 {
+  width: 89.33%;
+  top: calc(50% - 226px);
+  right: 5.33%;
+  left: 5.33%;
+}
+.rozanneBarrientes2 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 17.3%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean2 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 17.3%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.div4 {
+  position: absolute;
+  width: 84.8%;
+  top: calc(50% - 156px);
+  right: 9.87%;
+  left: 5.33%;
+  height: 2.5rem;
+}
+.rozanneBarrientes3 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 17.41%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean3 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 17.41%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.div5 {
+  position: absolute;
+  width: 84.27%;
+  top: calc(50% - 86px);
+  right: 10.4%;
+  left: 5.33%;
+  height: 2.5rem;
+}
+.rozanneBarrientes4 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 16.03%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean4 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 16.03%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.avatar {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #ffbdbd;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.avatar,
+.b,
+.div6 {
+  position: absolute;
+}
+.b {
+  top: 0.875rem;
+  left: 0.938rem;
+  line-height: 1rem;
+  font-weight: 500;
+  font-family: var(--font-sofia-pro);
+  color: var(--color-black);
+  display: inline-block;
+  width: 0.688rem;
+  height: 0.813rem;
+}
+.div6 {
+  width: 91.47%;
+  top: calc(50% - 16px);
+  right: 13.87%;
+  left: -5.33%;
+  height: 2.5rem;
+}
+.rozanneBarrientes5 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 16.27%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean5 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 16.27%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.div7 {
+  position: absolute;
+  width: 90.13%;
+  top: calc(50% + 54px);
+  right: 4.53%;
+  left: 5.33%;
+  height: 2.5rem;
+}
+.rozanneBarrientes6 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 18.64%;
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean6 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 18.64%;
+  font-size: var(--font-size-sm);
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.div8 {
+  position: absolute;
+  width: 78.67%;
+  top: calc(50% + 124px);
+  right: 16%;
+  left: 5.33%;
+  height: 2.5rem;
+  font-family: var(--font-sofia-pro);
+}
+.rozanneBarrientes7 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 15.85%;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean7 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 15.85%;
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.avatar1 {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #e1c4ff;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.avatar1,
+.div9,
+.n {
+  position: absolute;
+}
+.n {
+  top: 0.813rem;
+  left: 0.938rem;
+  line-height: 0.875rem;
+  font-family: var(--font-sofia-pro);
+  color: var(--color-black);
+}
+.div9 {
+  width: 92.53%;
+  top: calc(50% + 194px);
+  right: 2.13%;
+  left: 5.33%;
+  height: 2.5rem;
+  font-size: var(--font-size-sm);
+}
+.rozanneBarrientes8 {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: 17.24%;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+}
+.theNewLean8 {
+  position: absolute;
+  top: calc(50% + 4px);
+  left: 17.24%;
+  line-height: 0.875rem;
+  color: var(--color-dimgray);
+}
+.avatar2,
+.div10 {
+  position: absolute;
+  height: 2.5rem;
+}
+.avatar2 {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #c4dbff;
+  width: 2.5rem;
+}
+.div10 {
+  width: 85.07%;
+  top: calc(50% + 264px);
+  right: 9.6%;
+  left: 5.33%;
+  opacity: 0.5;
+  font-size: var(--font-size-sm);
+}
+.buttonIcon {
+  position: absolute;
+  top: 23.938rem;
+  left: 20.063rem;
+  width: 3.375rem;
+  height: 3.438rem;
+  object-fit: cover;
+}
+.message {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-gray-500);
+  font-family: var(--callout-medium);
+}

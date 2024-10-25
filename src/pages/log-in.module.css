@@ -1,0 +1,205 @@
+.fillYourDetails,
+.welcomeBack {
+  position: absolute;
+  left: 1.875rem;
+}
+.welcomeBack {
+  top: 6.25rem;
+  font-size: var(--font-size-11xl);
+  line-height: 1.875rem;
+  color: var(--color-gray-500);
+}
+.fillYourDetails {
+  top: 8.75rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  width: 14.188rem;
+}
+.emailAddress {
+  border: 0;
+  outline: 0;
+  font-family: var(--callout-medium);
+  font-size: var(--callout-medium-size);
+  background-color: transparent;
+  position: absolute;
+  top: 1rem;
+  left: 4.625rem;
+  line-height: 130%;
+  color: var(--color-dimgray);
+  text-align: left;
+}
+.messageIcon {
+  position: absolute;
+  top: 0.938rem;
+  left: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+.orContinueWith {
+  position: absolute;
+  top: 0;
+  left: 1.875rem;
+  line-height: 1rem;
+}
+.orChild,
+.orItem {
+  position: absolute;
+  top: 0.438rem;
+  left: -0.062rem;
+  border-top: 2px solid var(--color-darkgray-200);
+  box-sizing: border-box;
+  width: 1.375rem;
+  height: 0.125rem;
+}
+.orItem {
+  left: 10.813rem;
+}
+.linkChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-aliceblue-100);
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.icon,
+.link,
+.linkChild {
+  position: absolute;
+}
+.icon {
+  top: 0.813rem;
+  left: 0.813rem;
+  width: 2.125rem;
+  height: 2.125rem;
+  overflow: hidden;
+}
+.link {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 2.25rem;
+  left: 3.75rem;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.email,
+.or {
+  position: absolute;
+  top: 18rem;
+  left: 4.438rem;
+  width: 12.125rem;
+  height: 6rem;
+}
+.email {
+  top: 13.625rem;
+  left: 1.25rem;
+  border-radius: var(--br-xs);
+  background-color: var(--no-image);
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.lockIcon,
+.unionIcon {
+  position: absolute;
+  top: 1.313rem;
+  left: 18.625rem;
+  width: 1.025rem;
+  height: 0.813rem;
+}
+.lockIcon {
+  top: 0.875rem;
+  left: 1.25rem;
+  width: 1.25rem;
+  height: 1.625rem;
+}
+.linkItem,
+.password {
+  border-radius: var(--br-xs);
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.password {
+  position: absolute;
+  top: 18.5rem;
+  left: 1.25rem;
+  background-color: var(--no-image);
+}
+.linkItem {
+  top: 0;
+  left: 0;
+  background-color: var(--color-cadetblue);
+}
+.link1,
+.linkItem,
+.logIn1 {
+  position: absolute;
+}
+.logIn1 {
+  top: 1.188rem;
+  left: 8.875rem;
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+  font-family: var(--callout-medium);
+  color: var(--no-image);
+  text-align: center;
+}
+.link1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 25.75rem;
+  left: 1.25rem;
+  width: 20.938rem;
+  height: 3.375rem;
+}
+.forgetPassword {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 0.75rem;
+}
+.button {
+  position: absolute;
+  top: 22.5rem;
+  left: 15.563rem;
+  width: 6.625rem;
+  height: 0.75rem;
+  font-size: var(--font-size-xs);
+}
+.createAccount {
+  color: var(--color-gray-500);
+}
+.newUserCreateContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+.link2 {
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top: 40.75rem;
+  left: 5rem;
+  width: 13.375rem;
+  height: 1.625rem;
+  text-align: center;
+  color: inherit;
+}
+.logIn {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-100);
+  height: 50.75rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}
