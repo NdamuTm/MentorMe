@@ -173,7 +173,7 @@ const Home = () => {
           <div className={styles.setting}>Setting</div>
         </Link>
         <Link className={styles.link5} to={"/profile"}>
-          <img className={styles.profileIcon2} alt="" src="/profile@2x.png" />
+          <img className={styles.settingIcon} alt="" src="/profile@2x.png" />
           <div className={styles.message}>Profile</div>
         </Link>
       </section>
