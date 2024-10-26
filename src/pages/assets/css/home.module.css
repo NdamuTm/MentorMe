@@ -493,3 +493,21 @@
   position: fixed;
   bottom: 0;
 }
+
+
+.selectedMentorDetail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white; 
+  z-index: 10000000; 
+  padding: 20px;
+  transform: translateY(100%); 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.selectedMentorDetail.show {
+  transform: translateY(0); 
+}

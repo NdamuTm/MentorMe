@@ -15,7 +15,7 @@ const SetUp = () => {
           className={styles.firstChild}
           name="firstname"
           id="firstname"
-          value=""
+          
           placeholder="First name"
           type="text"
         />
@@ -26,7 +26,7 @@ const SetUp = () => {
         placeholder="example@gmail.com"
         name = "email"
         id="email"
-        value=""
+        
         />
         
         <div className={styles.yourEmail}>Your Email</div>
@@ -38,7 +38,7 @@ const SetUp = () => {
           placeholder="NMB Campus"
           name = "email"
           id="email"
-          value=""
+          
           /> */}
           <select className={styles.countryChild} name="Campus" id="Campus">
               <option value="bedfordview">Bedfordview</option>
@@ -64,7 +64,7 @@ const SetUp = () => {
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
 
           <select name="Course_Name" id="Course_Name" class={styles.countryChild}>
-              <option value="" label="Select" aria-label="Select">Select</option>
+              <option  label="Select" aria-label="Select">Select</option>
               <option value="Bachelor of Arts (Communication Science and English) - Campus Full Time">Bachelor of Arts (Communication Science and English) - Campus Full Time</option>
               <option value="Bachelor of Arts (Communication Science and English) - Online Part Time">Bachelor of Arts (Communication Science and English) - Online Part Time</option>
               <option value="Bachelor of Arts (Industrial Psychology and English Literature Studies) - Campus Full Time">Bachelor of Arts (Industrial Psychology and English Literature Studies) - Campus Full Time</option>
@@ -244,7 +244,7 @@ const SetUp = () => {
               placeholder="Second Year Student"
               name="Year" 
               id="Year"
-              value=""
+              
           />
 
           <div className={styles.year}>Year</div>
@@ -257,7 +257,7 @@ const SetUp = () => {
             placeholder="Web Dev" 
             name="Interest" 
             id="Interest"
-            value=""
+            
             />
         <div className={styles.interest}>Interest</div>
         {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
@@ -332,7 +332,7 @@ const SetUp = () => {
           className={styles.lastNameChild}
           name="lastname"
           id="lastname"
-          value=""
+          
           placeholder="Last name"
           type="text"
         />
