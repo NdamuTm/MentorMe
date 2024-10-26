@@ -1,4 +1,4 @@
-import styles from "./search.module.css";
+import styles from "./assets/css/search.module.css";
 
 const Search = () => {
   return (

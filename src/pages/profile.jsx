@@ -1,9 +1,15 @@
-import styles from "./profile.module.css";
+import { UserProfilePic } from "../components/profilePicgen.jsx";
+import styles from "./assets/css/profile.module.css";
+
 
 const Profile = () => {
+
+
+
+
   return (
     <div className={styles.profile}>
-      <img className={styles.profileChild} alt="" src="/rectangle-382@2x.png" />
+      <div>{UserProfilePic()}</div>
       <div className={styles.oval} />
       <img className={styles.fill244Icon} alt="" src="/fill-244.svg" />
       <div className={styles.ndamuleloRasendedza}>Ndamulelo Rasendedza</div>
@@ -14,6 +20,7 @@ const Profile = () => {
           className={styles.input}
           placeholder="Ndamulelo  Rasendedza"
           type="text"
+          
         />
         <div className={styles.yourEmail}>Name</div>
       </div>
@@ -22,6 +29,7 @@ const Profile = () => {
           className={styles.input}
           placeholder="Ndamutm23@gmail.com"
           type="text"
+
         />
         <div className={styles.yourEmail}>Your Email</div>
       </div>

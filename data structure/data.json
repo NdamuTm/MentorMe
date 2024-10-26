@@ -1,0 +1,66 @@
+{
+  "mentor": {
+    "id": "KbZFEcabHYRcEkvhVYbo",
+    "u_id": "unique_user_id",
+    "name": "Mentor Name",
+    "surname": "Mentor Surname",
+    "city": "City Name",
+    "province": "Province Name",
+    "company": "Company Name",
+    "experience": "Years of Experience",
+    "industry": "Industry Type",
+    "qualifications": [
+      "Qualification 1",
+      "Qualification 2"
+    ]
+  },
+  "student": {
+    "id": "student_id",
+    "u_id": "unique_user_id",
+    "name": "Student Name",
+    "surname": "Student Surname",
+    "city": "City Name",
+    "province": "Province Name",
+    "school": "School/University Name",
+    "major": "Field of Study",
+    "year": "Current Year (e.g., 1st Year, 2nd Year)",
+    "interests": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "profilePic": "url_to_profile_picture",
+    "bio": "A brief introduction about the student, their goals, and what they hope to achieve through mentoring."
+  },
+  "mentorshipApplication": {
+    "firstName": "Student name",
+    "lastName": "student surname",
+    "email": "student email",
+    "location": "student location",
+    "message": "student message",
+    "cv": {
+      "fileName": "cv filename",
+      "fileUrl": "cv file"
+    },
+    "status": "Application status"
+  },
+  "messages": [
+    {
+      "id": "unique_message_id",
+      "senderId": "user_id",
+      "receiverId": "receiver_id",
+      "text": "message text",
+      "timestamp": "timestamp"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "unique_notification_id",
+      "userId": "user_id",
+      "senderId": "sender_user_id",
+      "type": "message",
+      "message": "You have a new message",
+      "timestamp": "timestamp",
+      "isRead": false
+    }
+  ]
+}

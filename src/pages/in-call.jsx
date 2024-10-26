@@ -1,4 +1,4 @@
-import styles from "./in-call.module.css";
+import styles from "./assets/css/in-call.module.css";
 
 const InCall = () => {
   return (

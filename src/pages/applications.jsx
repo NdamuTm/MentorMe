@@ -1,4 +1,4 @@
-import styles from "./applications.module.css";
+import styles from "./assets/css/applications.module.css";
 
 const Applications = () => {
   return (

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./splash.module.css";
+import styles from "./assets/css/splash.module.css";
 
 const Splash = () => {
   return (

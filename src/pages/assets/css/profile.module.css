@@ -7,6 +7,21 @@
   height: 5rem;
   object-fit: cover;
 }
+
+.profileChildText{
+  position: absolute;
+  top: 6.875rem;
+  left: 9.25rem;
+  font-family: var(--font-family-medium);
+  font-size: 3rem;
+  line-height: 1.125rem;
+  font-weight: 600;
+  color: white;
+  background: #4ca6a8;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
 .oval {
   position: absolute;
   height: 2.46%;

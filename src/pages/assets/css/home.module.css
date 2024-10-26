@@ -119,69 +119,10 @@
   left: 17.813rem;
   line-height: 0.75rem;
 }
-.userCardChild {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.1);
-  border-radius: var(--br-xl);
-  background-color: var(--no-image);
-  width: 16.25rem;
-  height: 10rem;
-}
-.michaelNdlovu,
-.profileIcon {
-  position: absolute;
-  left: 0.938rem;
-}
-.profileIcon {
-  top: 0.938rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-}
-.michaelNdlovu {
-  top: 3.688rem;
-  line-height: 0.75rem;
-  font-weight: 500;
-}
-.financeAccounting,
-.johannesburgSouthAfrica {
-  position: absolute;
-  top: 7.563rem;
-  left: 0.938rem;
-  line-height: 0.75rem;
-  color: var(--color-darkgray-200);
-}
-.financeAccounting {
-  top: 5.75rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  font-weight: 500;
-  color: var(--color-gray-600);
-  text-align: left;
-}
-.likeBtnIcon {
-  position: absolute;
-  height: 17.5%;
-  width: 10.77%;
-  top: 12.5%;
-  right: 7.69%;
-  bottom: 70%;
-  left: 81.54%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-.userCard {
-  position: absolute;
-  top: 0;
-  left: 17.125rem;
-  width: 16.25rem;
-  height: 10rem;
-}
-.profileIcon1,
+
+
+
+
 .profileIconChild {
   position: absolute;
   width: 2.5rem;
@@ -193,47 +134,9 @@
   border-radius: var(--br-smi);
   background-color: var(--color-aliceblue-200);
 }
-.profileIcon1 {
-  top: 0.938rem;
-  left: 0.938rem;
-}
-.capeTownSouth,
-.emilyMokoena {
-  position: absolute;
-  top: 3.813rem;
-  left: 0.813rem;
-  line-height: 0.75rem;
-}
-.capeTownSouth {
-  top: 7.563rem;
-  left: 0.938rem;
-}
-.popularTutorsSlider,
-.userCard1 {
-  position: absolute;
-  left: 0;
-  height: 10rem;
-}
-.userCard1 {
-  top: 0;
-  width: 16.25rem;
-}
-.popularTutorsSlider {
-  top: 2.5rem;
-  width: 33.375rem;
-  text-align: center;
-}
-.popularTutors {
-  position: absolute;
-  top: 12.375rem;
-  left: 1.25rem;
-  width: 33.375rem;
-  height: 12.5rem;
-  text-align: left;
-  font-size: var(--font-size-xs);
-  color: var(--color-dimgray);
-  font-family: var(--callout-medium);
-}
+
+
+
 .recentTutors {
   position: absolute;
   top: 0;
@@ -242,6 +145,7 @@
   line-height: 1.25rem;
   font-weight: 600;
   color: var(--color-gray-500);
+  
 }
 .showAll1 {
   position: absolute;
@@ -249,130 +153,6 @@
   left: 17.813rem;
   font-size: var(--font-size-xs);
   line-height: 0.75rem;
-}
-.recentUserListChild {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
-  border-radius: var(--br-xl);
-  background-color: var(--no-image);
-  width: 20.938rem;
-  height: 5rem;
-}
-.facebook,
-.facebookChild {
-  position: absolute;
-  width: 3.125rem;
-  height: 3.125rem;
-}
-.facebookChild {
-  top: 0;
-  left: 0;
-  border-radius: var(--br-mini);
-  background-color: var(--color-steelblue);
-}
-.facebook {
-  top: 0.938rem;
-  left: 0.938rem;
-}
-.sarahDlamini {
-  position: absolute;
-  top: 1.25rem;
-  left: 5.313rem;
-  line-height: 1rem;
-  font-weight: 600;
-  color: var(--color-gray-500);
-}
-.marketingAdvertising,
-.peerMentor {
-  position: absolute;
-  top: 2.875rem;
-  left: 5.313rem;
-  font-size: var(--font-size-3xs);
-  line-height: 0.75rem;
-}
-.peerMentor {
-  top: 2.125rem;
-  left: 15.625rem;
-  font-size: var(--font-size-xs);
-  font-weight: 500;
-}
-.recentUserList {
-  position: absolute;
-  top: 2.5rem;
-  left: 0;
-  width: 20.938rem;
-  height: 5rem;
-}
-.spotifyChild {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: var(--br-mini);
-  background-color: var(--color-honeydew-100);
-  width: 3.125rem;
-  height: 3.125rem;
-}
-.avatarIcon {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-}
-.industryExpert {
-  position: absolute;
-  top: 2.125rem;
-  left: 14.625rem;
-  font-size: var(--font-size-xs);
-  line-height: 0.75rem;
-  font-weight: 500;
-}
-.recentUserList1 {
-  position: absolute;
-  top: 8.75rem;
-  left: 0;
-  width: 20.938rem;
-  height: 5rem;
-}
-.spotifyItem {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: var(--br-mini);
-  background-color: var(--color-gray-700);
-  width: 3.125rem;
-  height: 3.125rem;
-}
-.seniorMentor {
-  position: absolute;
-  top: 2.125rem;
-  left: 15.063rem;
-  font-size: var(--font-size-xs);
-  line-height: 0.75rem;
-  font-weight: 500;
-}
-.recent,
-.recentUserList2 {
-  position: absolute;
-  width: 20.938rem;
-}
-.recentUserList2 {
-  top: 15rem;
-  left: 0;
-  height: 5rem;
-}
-.recent {
-  top: 26.75rem;
-  left: 1.25rem;
-  height: 20rem;
-  text-align: left;
-  font-size: var(--callout-medium-size);
-  color: var(--color-dimgray);
-  font-family: var(--callout-medium);
 }
 .navigationChild,
 .shadow {
@@ -494,19 +274,7 @@
   bottom: 14.13%;
   left: 78.4%;
 }
-.profileIcon2 {
-  position: absolute;
-  height: 54.05%;
-  width: 43.24%;
-  top: 0;
-  right: 27.03%;
-  bottom: 45.95%;
-  left: 29.73%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
+
 .link5 {
   cursor: pointer;
   border: 0;
@@ -527,38 +295,184 @@
   width: 23.438rem;
   height: 5.75rem;
 }
-.avatarIcon1,
-.avatarIcon2,
-.avatarIcon3,
-.avatarIcon4 {
-  position: absolute;
-  top: 16rem;
-  left: 2.344rem;
-  width: 2.188rem;
-  height: 2.188rem;
-  object-fit: cover;
-}
-.avatarIcon2,
-.avatarIcon3,
-.avatarIcon4 {
-  top: 15.938rem;
-  left: 19.5rem;
-  border-radius: 50%;
-}
-.avatarIcon3,
-.avatarIcon4 {
-  top: 30.5rem;
-  left: 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-.avatarIcon4 {
-  top: 43rem;
-}
+
+
 .home {
   width: 100%;
   position: relative;
   background-color: var(--color-gray-100);
   height: 50.75rem;
   overflow: hidden;
+}
+
+
+
+
+/* Usercard  */
+
+
+
+.userCard {
+  box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--br-xl);
+  background-color: var(--no-image);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: .3rem;
+  transition: background-color 0.3s ease;
+  min-width: 15rem;
+  flex-direction: column;
+  scroll-snap-align: center;
+}
+
+.flex1{
+  flex: 1;
+}
+
+.cardUsername {
+  top: 3.688rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+}
+.career,
+.location {
+
+  line-height: 0.75rem;
+  color: var(--color-darkgray-200);
+}
+.career {
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  text-align: left;
+}
+.likeBtnIcon {
+  height: 17.5%;
+  width: 10.77%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.userCard .likeBtnIcon{
+  width: 2rem;
+  height: 2rem;
+}
+.avatarIcon {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  
+}
+
+.profileIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #E4F2FF;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popularTutorsSlider {
+  width: 100vw;
+  overflow-x: auto;
+  padding: 1rem;
+  margin-inline: -1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-right: 1.5rem;
+
+}
+.popularTutors {
+  position: absolute;
+  top: 12.375rem;
+  left: 1.25rem;
+  width: 33.375rem;
+  height: 12.5rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+
+ 
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+/* Recent tutors */
+
+
+.recentUserList {
+  margin-top: 3rem;
+  width: 20.938rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+
+.recentUserListChild {
+  box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
+  border-radius: var(--br-xl);
+  background-color: var(--no-image);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.recentTutorsImg{
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: var(--br-mini);
+  background-color: var(--color-steelblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recentTutorsName{
+  line-height: 1rem;
+  font-weight: 600;
+  color: var(--color-gray-500);
+}
+.recentTutorsCareer {
+  font-size: var(--font-size-3xs);
+  line-height: 0.75rem;
+}
+.mentorType {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.recent {
+  position: absolute;
+  width: 20.938rem;
+  top: 26.75rem;
+  left: 1.25rem;
+  height: 20rem;
+  text-align: left;
+  font-size: var(--callout-medium-size);
+  color: var(--color-dimgray);
+  font-family: var(--callout-medium);
+}
+
+.main{
+  overflow-y: scr;
 }
