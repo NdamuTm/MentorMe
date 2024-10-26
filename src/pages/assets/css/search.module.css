@@ -146,7 +146,7 @@
 }
 .facebook,
 .facebookChild {
-  position: absolute;
+  /* position: absolute; */
   width: 3.125rem;
   height: 3.125rem;
 }
@@ -171,7 +171,7 @@
 }
 .capeTown,
 .uiuxDesign {
-  position: absolute;
+  /* position: absolute; */
   top: 1.375rem;
   left: 5.625rem;
   line-height: 0.75rem;
@@ -181,7 +181,7 @@
 }
 .ellipseIcon,
 .path3392Icon {
-  position: absolute;
+  /* position: absolute; */
   height: 100%;
   width: 100%;
   top: 0;
@@ -206,7 +206,7 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  position: absolute;
+  /* position: absolute; */
   height: 28%;
   width: 8.36%;
   top: 12%;
@@ -288,7 +288,7 @@
   height: 6.25rem;
 }
 .facebookChild1 {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   border-radius: var(--br-mini);
@@ -356,7 +356,7 @@
 }
 .avatarIcon3,
 .avatarIcon4 {
-  position: absolute;
+  /* position: absolute; */
   top: 19rem;
   left: 2.813rem;
   border-radius: 50%;
