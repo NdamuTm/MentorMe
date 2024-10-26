@@ -1,10 +1,10 @@
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserProfilePic } from "../components/profilePicgen.jsx";
 import { getMentors, getStudents } from "../services/dataService.js";
 import styles from "./assets/css/home.module.css";
 import Apply from "./componets/apply.jsx";
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const UserCard = ({ name, career, location, avatarSrc, onClick }) => (
   <div className={styles.userCard} onClick={onClick}>
@@ -79,13 +79,15 @@ const Home = () => {
         window.location.href ="/log-in";
       }
     });
-
+    console.log("Current user:", currentUser);
     return () => unsubscribe(); 
+    
   }, []);
 
   const senderId = currentUser ? currentUser.uid : null; 
 
   const handleMentorClick = (mentor) => {
+    console.log("Mentor clicked:", mentor); 
     setSelectedMentor(mentor);
   };
 
@@ -171,16 +173,16 @@ const Home = () => {
 
       {/* Selected Mentor Detail Section */}
       {selectedMentor && (
-        <div className={styles.selectedMentorDetail}>
-          <Apply
-            
-            className={styles.apply} 
-            senderId={senderId} 
-            receiverId={selectedMentor.id} 
-          />
-          <button onClick={closeMentorDetail}>Close</button>
-        </div>
-      )}
+  <div className={styles.selectedMentorDetail}>
+    <Apply
+      className={styles.apply}
+      senderId={senderId}
+      receiverId={selectedMentor.id}
+    />
+    <button onClick={closeMentorDetail}>Close</button>
+  </div>
+)}
+
 
       <section className={styles.navigation}>
         <div className={styles.shadow} />

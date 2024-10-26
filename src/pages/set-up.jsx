@@ -328,7 +328,12 @@ const SetUp = () => {
             {/* <img className={styles.icon} alt="" src="/icon1@2x.png" /> */}
           </div>
         </div>
-        <div className={styles.profilePicture}>Profile Picture</div>
+
+        <input type="file" accept="image/*"></input>
+        <div className={styles.profilePicture}>
+          Profile Picture
+          
+          </div>
       </section>
       <div className={styles.lastName}>
         <div className={styles.lastNameChild}/>
