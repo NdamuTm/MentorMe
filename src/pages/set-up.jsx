@@ -18,7 +18,7 @@ const SetUp = () => {
       </div>
       <div className={styles.emai}>
         <input className={styles.emaiChild} type="text" />
-        <div className={styles.input1}>ndamutm23@gmail.com</div>
+        
         <div className={styles.yourEmail}>Your Email</div>
       </div>
       <div className={styles.student}>
@@ -27,6 +27,7 @@ const SetUp = () => {
           <div className={styles.input2}>NMB Campus</div>
           <div className={styles.campus}>Campus</div>
           <img className={styles.buttonIcon} alt="" src="/button.svg" />
+          
         </div>
         <div className={styles.country1}>
           <input className={styles.countryChild} type="text" />

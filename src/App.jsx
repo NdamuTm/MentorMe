@@ -5,6 +5,7 @@ import {
   useLocation,
   useNavigationType,
 } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Applications from "./pages/applications";
 import Form from "./pages/form";
 import Home from "./pages/home";
@@ -37,44 +38,17 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Home";
+        metaDescription = "Welcome to the home page.";
         break;
-      case "/form":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/splash":
-        title = "";
-        metaDescription = "";
-        break;
+
       case "/log-in":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/in-call":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/message-person":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/message":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/notification":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/applications":
-        title = "";
-        metaDescription = "";
+        title = "Log In";
+        metaDescription = "Log in to access your account.";
         break;
       case "/profile":
-        title = "";
-        metaDescription = "";
+        title = "Profile";
+        metaDescription = "Your profile information.";
         break;
       case "/search":
         title = "";
@@ -119,7 +93,11 @@ function App() {
       <Route path="/message" element={<Message />} />
       <Route path="/notification" element={<Notification1 />} />
       <Route path="/applications" element={<Applications />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/profile" element={
+        <ProtectedRoute>
+          <Profile />
+        </ProtectedRoute>
+      } />
       <Route path="/search" element={<Search />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/sign-up" element={<SignUp />} />
@@ -127,4 +105,5 @@ function App() {
     </Routes>
   );
 }
+
 export default App;
