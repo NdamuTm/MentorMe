@@ -31,7 +31,7 @@ const Search = () => {
   }, []);
 
 const UserCard = ({ name, Campus, Qualification, avatar }) => (
-  <div className={styles.dribbble}>
+  <div >
           <div className={styles.fbChild} />
           <div className={styles.facebook}>
             <img className={styles.avatarIcon3} alt="" src={avatar} />
@@ -91,107 +91,24 @@ const UserCard = ({ name, Campus, Qualification, avatar }) => (
           </button>
         </div>
         {/* //////////////////new code//////////////////////////////////////////////////////////////////////// */}
-        {users.map((user) => (
-          <UserCard
-            key={user.id}
-            name={user.name}
-            avatar={user.avatar || "/default-avatar.png"} 
-            Qualification={user.Qualification}
-            Campus={user.Campus}
-          /> 
-        ))}
-       {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <div className={styles.dribbble}>
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
-            <div className={styles.facebookItem} />
-            <div className={styles.div} />
-          </div>
-          <div className={styles.aneleNdlovu}>Anele Ndlovu</div>
-          <div className={styles.capeTown}>Johannesburg</div>
-          <div className={styles.uiuxDesign}>Product Design Mentor</div>
-          <button className={styles.button3}>
-            <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
+
+            {users.map((user) => (
+              <UserCard
+                key={user.id}
+                name={user.name}
+                avatar={user.avatar || "/default-avatar.png"} 
+                Qualification={user.Qualification}
+                Campus={user.Campus}
+              /> 
+            ))}
+
         </div>
-        <div className={styles.google}>
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
-            <div className={styles.facebookInner} />
-          </div>
-          <div className={styles.thaboMthembu}>Zinhle Nkosi</div>
-          <div className={styles.capeTown}>Google</div>
-          <div className={styles.uiuxDesign}>Senior UX Design</div>
-          <button className={styles.button3}>
-            <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
-        </div>
-        <div className={styles.shopify}>
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
-            <div className={styles.rectangleDiv} />
-          </div>
-          <div className={styles.thaboMthembu}>Busi Dlamini</div>
-          <div className={styles.capeTown}>Durban</div>
-          <div className={styles.uiuxDesign}>Visual Design</div>
-          <button className={styles.button3}>
-            <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
-        </div>
-        <div className={styles.netflix}>
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
-            <div className={styles.facebookChild1} />
-          </div>
-          <div className={styles.siphoKhumalo}>Sipho Khumalo</div>
-          <div className={styles.bloemfontein}>Bloemfontein</div>
-          <div className={styles.visualDesign1}>Visual Design</div>
-          <button className={styles.button3}>
-            <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
-        </div>
-        <img className={styles.avatarIcon} alt="" src="/avatar8@2x.png" />
-        <img className={styles.avatarIcon1} alt="" src="/avatar3@2x.png" />
-        <img className={styles.avatarIcon2} alt="" src="/avatar@2x.png" />
-      </main>
-      <img className={styles.avatarIcon3} alt="" src="/avatar7@2x.png" />
-      <img className={styles.avatarIcon4} alt="" src="/avatar4@2x.png" />
+
+        
+       {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+      </main> 
     </div>
   );
 };
