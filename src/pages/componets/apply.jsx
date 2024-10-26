@@ -1,70 +1,77 @@
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { getMentors } from "../../services/dataService.js";
 import styles from "./apply.module.css";
 
-export const Apply = ({ className = "" }) => {
+export const Apply = ({ className = "", senderId, receiverId }) => {
+  console.log("Apply Component Rendered - Sender:", senderId, "Receiver:", receiverId);
+
+  const [mentors, setMentors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchMentors = async () => {
+      try {
+        const fetchedMentors = await getMentors();
+        setMentors(fetchedMentors);
+      } catch (err) {
+        console.error("Error fetching mentors:", err);
+        setError("Failed to load mentors.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMentors();
+  }, []);
+
+
+  const mentor = mentors.find((mentor) => mentor.id === receiverId);
+
   return (
     <div className={[styles.apply, className].join(" ")}>
-      <img className={styles.avatarIcon1} alt="" src="/avatar1@2x.png" />
-      <img className={styles.avatarIcon2} alt="" src="/avatar2@2x.png" />
-      <img className={styles.avatarIcon3} alt="" src="/avatar3@2x.png" />
-      <img className={styles.avatarIcon4} alt="" src="/avatar4@2x.png" />
-      <img className={styles.applyChild} alt="" src="/rectangle-527@2x.png" />
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : mentor ? (
+        <div className={[styles.apply, className].join(" ")}>
+
       <main className={styles.vectorParent}>
-        <section className={styles.groupChild} />
+
+        
+        {/* Dynamic Mentor Data */}
         <div className={styles.time}>
-          <input
-            className={styles.input}
-            placeholder="Full Time "
-            type="text"
-          />
+          
+          <div className={styles.input} >Full Time</div>
           <img
             className={styles.antDesignclockCircleOutlinIcon}
             alt=""
-            src="/antdesignclockcircleoutlined@2x.png"
+            src="/clock.svg"
           />
         </div>
         <div className={styles.free}>Free</div>
-        <div className={styles.uiDesignLead}>UI Design Lead Mentor</div>
+        <div className={styles.uiDesignLead}>{mentor?.name} - {mentor?.experience}</div>
         <div className={styles.spotify2}>
           <div className={styles.spotifyInner} />
         </div>
         <div className={styles.spotifyDetails}>
-          <div className={styles.spotify3}>Spotify</div>
-          <div className={styles.capeTown}>Cape Town</div>
+          <div className={styles.spotify3}>{mentor?.industry}</div>
+          <div className={styles.capeTown}>{mentor?.city}</div>
           <div className={styles.spotifyDetailsChild} />
-          <img className={styles.locationIcon} alt="" src="/location@2x.png" />
+          <img className={styles.locationIcon} alt="" src="/Location.svg" />
         </div>
-        <button className={styles.button}>
-          <div className={styles.buttonChild} />
-          <div className={styles.description}>Description</div>
-        </button>
-        <button className={styles.button1}>
-          <div className={styles.buttonItem} />
-          <div className={styles.company}>Company</div>
-        </button>
-        <button className={styles.button2}>
-          <div className={styles.buttonInner} />
-          <div className={styles.reviews}>Reviews</div>
-        </button>
+        
         <section className={styles.qualifications}>
-          <div className={styles.exceptionalCommunicationSkil}>
-            Exceptional communication skills and team working skill
-          </div>
-          <div className={styles.qualificationsChild} />
-          <div className={styles.creativeWithAn}>
-            Creative with an eye for shape and colour
-          </div>
-          <div className={styles.qualificationsItem} />
-          <div className={styles.knowThePrincipal}>
-            Know the principal of animation and you can create high prtotypes
-          </div>
-          <div
-            className={styles.figmaxdSketch}
-          >{`Figma,Xd & Sketch must know about this apps`}</div>
-          <div className={styles.qualificationsInner} />
-          <div className={styles.ellipseDiv} />
           <div className={styles.qualifications1}>Qualifications:</div>
+          {mentor?.qualifications?.map((qualification, index) => (
+            <div key={index} className={styles.qualificationItem}>
+              {qualification}
+            </div>
+          ))}
         </section>
+        
         <button className={styles.button3}>
           <div className={styles.rectangleDiv} />
           <div className={styles.applyNow}>Apply Now</div>
@@ -75,13 +82,19 @@ export const Apply = ({ className = "" }) => {
         </button>
         <div className={styles.groupItem} />
       </main>
-      <img className={styles.avatarIcon5} alt="" src="/avatar9@2x.png" />
+      <img className={styles.avatarIcon5} alt="" src={mentor?.profilePic} />
+    </div>
+      ) : (
+        <p>Mentor not found</p>
+      )}
     </div>
   );
 };
 
 Apply.propTypes = {
   className: PropTypes.string,
+  senderId: PropTypes.string,
+  receiverId: PropTypes.string,
 };
 
 export default Apply;
