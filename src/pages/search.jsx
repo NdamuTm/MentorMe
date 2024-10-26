@@ -1,6 +1,65 @@
 import styles from "./assets/css/search.module.css";
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../config/firebase"; // Ensure the path is correct
+
+
 
 const Search = () => {
+  const [users, setUsers] = useState([]);
+
+
+{/* //////////////////////new code///////////////////////////////////////////////////////////////////////////////////////////// */}
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const usersCollection = collection(db, "users");
+        const usersSnapshot = await getDocs(usersCollection);
+        const usersList = usersSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setUsers(usersList);
+      } catch (error) {
+        console.error("Error fetching users: ", error);
+      }
+    };
+
+    fetchUsers();
+    console.log(users)
+  }, []);
+
+const UserCard = ({ name, Campus, Qualification, avatar }) => (
+  <div className={styles.dribbble}>
+          <div className={styles.fbChild} />
+          <div className={styles.facebook}>
+            <img className={styles.avatarIcon3} alt="" src={avatar} />
+            <div className={styles.facebookItem} />
+            <div className={styles.div} />
+          </div>
+          <div className={styles.aneleNdlovu}>{name}</div>
+          <div className={styles.capeTown}>{Campus}</div>
+          <div className={styles.uiuxDesign}>{Qualification}</div>
+          <button className={styles.button3}>
+          <img
+              className={styles.ellipseIcon}
+              alt=""
+              src="/ellipse-58@2x.png"
+            />
+            <img
+              className={styles.path3392Icon}
+              alt=""
+              src="/path-3392@2x.png"
+            />
+          </button>
+        </div>
+);
+{/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+
+
   return (
     <div className={styles.search}>
       <main className={styles.headerParent}>
@@ -31,27 +90,17 @@ const Search = () => {
             <div className={styles.mostRecent}>Most Recent</div>
           </button>
         </div>
-        <div className={styles.fb}>
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
-            <div className={styles.facebookChild} />
-          </div>
-          <div className={styles.thaboMthembu}>Thabo Mthembu</div>
-          <div className={styles.capeTown}>Cape Town</div>
-          <div className={styles.uiuxDesign}>UI/UX Design</div>
-          <button className={styles.button3}>
-            <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
-        </div>
+        {/* //////////////////new code//////////////////////////////////////////////////////////////////////// */}
+        {users.map((user) => (
+          <UserCard
+            key={user.id}
+            name={user.name}
+            avatar={user.avatar || "/default-avatar.png"} 
+            Qualification={user.Qualification}
+            Campus={user.Campus}
+          /> 
+        ))}
+       {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className={styles.dribbble}>
           <div className={styles.fbChild} />
           <div className={styles.facebook}>
