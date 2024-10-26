@@ -99,7 +99,7 @@ const UserCard = ({ name, Campus, Qualification, avatar }) => (
               <UserCard
                 key={user.id}
                 name={user.name || "test user"}
-                avatar={user.avatar || "/default-avatar.png"} 
+                avatar={user.avatar || "/avatar2@2x.png"} 
                 Qualification={user.Qualification || "software engineer"}
                 Campus={user.Campus || "NMB campus"}
               /> 
