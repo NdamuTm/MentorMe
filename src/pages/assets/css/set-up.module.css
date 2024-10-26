@@ -483,3 +483,7 @@
   color: var(--color-gray-500);
   font-family: var(--callout-medium);
 }
+
+.Hidden{
+  display: none;
+}
