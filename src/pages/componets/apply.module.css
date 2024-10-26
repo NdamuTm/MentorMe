@@ -1,0 +1,932 @@
+.menuChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    width: 44px;
+    height: 44px;
+  }
+  .vectorIcon {
+    position: absolute;
+    height: 27.27%;
+    width: 36.36%;
+    top: 36.36%;
+    right: 31.82%;
+    bottom: 36.36%;
+    left: 31.82%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .headingChild,
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+  }
+  .headingChild {
+    left: 291px;
+    border-radius: var(--br-16xl);
+    object-fit: cover;
+  }
+  .goBtnChild,
+  .heading {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 335px;
+    height: 44px;
+  }
+  .goBtnChild {
+    left: 0;
+    border-radius: var(--br-mini);
+    background-color: var(--color-cadetblue);
+    width: 54px;
+    height: 54px;
+  }
+  .adjustHorizontalAltIcon {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  .goBtn,
+  .searchBoxChild {
+    position: absolute;
+    top: 0;
+    left: 281px;
+    width: 54px;
+    height: 54px;
+  }
+  .searchBoxChild {
+    border: 0;
+    outline: 0;
+    background-color: var(--no-image);
+    left: 0;
+    border-radius: var(--br-mini);
+    width: 266px;
+  }
+  .searchForTutors {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    line-height: 16px;
+  }
+  .searchBox {
+    position: absolute;
+    top: 74px;
+    left: 20px;
+    width: 335px;
+    height: 54px;
+  }
+  .popularTutors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--font-size-xl);
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--color-gray-500);
+  }
+  .showAll {
+    position: absolute;
+    top: 8px;
+    left: 285px;
+    line-height: 12px;
+  }
+  .googleChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--br-xl);
+    background-color: var(--no-image);
+    width: 260px;
+    height: 160px;
+  }
+  .loveIcon {
+    position: absolute;
+    height: 17.5%;
+    width: 10.77%;
+    top: 12.5%;
+    right: 7.69%;
+    bottom: 70%;
+    left: 81.54%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .googleItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-smi);
+    background-color: var(--color-aliceblue-200);
+    width: 40px;
+    height: 40px;
+  }
+  .capeTownSouth,
+  .emilyMokoena,
+  .itSoftware {
+    position: absolute;
+    top: 61px;
+    left: 13px;
+    line-height: 12px;
+  }
+  .capeTownSouth,
+  .itSoftware {
+    top: 121px;
+    left: 15px;
+  }
+  .itSoftware {
+    top: 92px;
+    font-size: var(--callout-medium-size);
+    line-height: 16px;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    text-align: left;
+  }
+  .google {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 260px;
+    height: 160px;
+    text-align: center;
+  }
+  .popularJob,
+  .showAll1 {
+    position: absolute;
+    font-size: var(--font-size-xs);
+  }
+  .popularJob {
+    top: 158px;
+    left: 20px;
+    width: 335px;
+    height: 200px;
+    text-align: left;
+    color: var(--color-dimgray);
+    font-family: var(--callout-medium);
+  }
+  .showAll1 {
+    top: 8px;
+    left: 285px;
+    line-height: 12px;
+  }
+  .fbTabChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 10px 35px -10px rgba(63, 59, 75, 0.1);
+    border-radius: var(--br-xl);
+    background-color: var(--no-image);
+    width: 335px;
+    height: 80px;
+  }
+  .facebook,
+  .facebookChild {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+  .facebookChild {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-mini);
+    background-color: var(--color-steelblue);
+  }
+  .facebook {
+    top: 15px;
+    left: 15px;
+  }
+  .sarahDlamini {
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--color-gray-500);
+  }
+  .marketingAdvertising,
+  .peerMentor {
+    position: absolute;
+    top: 46px;
+    left: 85px;
+    font-size: var(--font-size-3xs);
+    line-height: 12px;
+  }
+  .peerMentor {
+    top: 34px;
+    left: 250px;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+  }
+  .fbTab,
+  .spotifyChild {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 335px;
+    height: 80px;
+  }
+  .spotifyChild {
+    top: 0;
+    border-radius: var(--br-mini);
+    background-color: var(--color-honeydew-100);
+    width: 50px;
+    height: 50px;
+  }
+  .avatarIcon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .industryExpert {
+    position: absolute;
+    top: 34px;
+    left: 234px;
+    font-size: var(--font-size-xs);
+    line-height: 12px;
+    font-weight: 500;
+  }
+  .spotifyItem,
+  .spotifyTab {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 335px;
+    height: 80px;
+  }
+  .spotifyItem {
+    top: 0;
+    border-radius: var(--br-mini);
+    background-color: var(--color-gray-700);
+    width: 50px;
+    height: 50px;
+  }
+  .seniorMentor {
+    position: absolute;
+    top: 34px;
+    left: 241px;
+    font-size: var(--font-size-xs);
+    line-height: 12px;
+    font-weight: 500;
+  }
+  .netflix,
+  .spotifyIcon {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    width: 335px;
+    height: 80px;
+  }
+  .spotifyIcon {
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .visualDesigner {
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    font-size: var(--callout-medium-size);
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--color-gray-500);
+  }
+  .fullTime,
+  .m {
+    position: absolute;
+    top: 46px;
+    left: 85px;
+    line-height: 12px;
+  }
+  .m {
+    top: 34px;
+    left: 265px;
+    font-weight: 500;
+  }
+  .recent,
+  .slack {
+    position: absolute;
+    width: 335px;
+  }
+  .slack {
+    top: 340px;
+    left: 0;
+    height: 80px;
+    opacity: 0.3;
+    font-size: var(--font-size-xs);
+    color: var(--color-darkgray-200);
+    font-family: var(--font-sofia-pro);
+  }
+  .recent {
+    top: 388px;
+    left: 20px;
+    height: 420px;
+    text-align: left;
+    font-size: var(--callout-medium-size);
+    color: var(--color-dimgray);
+    font-family: var(--callout-medium);
+  }
+  .navigationChild,
+  .shadow {
+    position: absolute;
+    width: 375px;
+  }
+  .shadow {
+    top: 48px;
+    left: 375px;
+    background: linear-gradient(
+      180deg,
+      rgba(7, 21, 41, 0.07),
+      rgba(196, 196, 196, 0)
+    );
+    height: 48px;
+    transform: rotate(180deg);
+    transform-origin: 0 0;
+  }
+  .navigationChild {
+    top: 22px;
+    left: 0;
+    border-radius: var(--br-11xl-5) var(--br-11xl-5) 0 0;
+    background-color: var(--no-image);
+    height: 70px;
+  }
+  .navigationItem {
+    position: absolute;
+    top: 79px;
+    left: 49px;
+    width: 16px;
+    height: 13px;
+    object-fit: contain;
+  }
+  .chatIcon,
+  .homeIcon {
+    position: absolute;
+    height: 21.74%;
+    width: 5.07%;
+    top: 45.65%;
+    right: 82%;
+    bottom: 32.61%;
+    left: 12.93%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .chatIcon {
+    height: 54.05%;
+    width: 36.36%;
+    top: 0;
+    right: 30.91%;
+    bottom: 45.95%;
+    left: 32.73%;
+  }
+  .massage1 {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    line-height: 12px;
+  }
+  .massage,
+  .settingIcon {
+    position: absolute;
+    height: 40.22%;
+    width: 14.67%;
+    top: 45.65%;
+    right: 52.8%;
+    bottom: 14.13%;
+    left: 32.53%;
+  }
+  .settingIcon {
+    height: 54.05%;
+    width: 45.24%;
+    top: 0;
+    right: 26.19%;
+    bottom: 45.95%;
+    left: 28.57%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .profileIcon,
+  .setting {
+    position: absolute;
+    height: 40.22%;
+    width: 11.2%;
+    top: 45.65%;
+    right: 10.4%;
+    bottom: 14.13%;
+    left: 78.4%;
+  }
+  .profileIcon {
+    height: 54.05%;
+    width: 43.24%;
+    top: 0;
+    right: 27.03%;
+    bottom: 45.95%;
+    left: 29.73%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .profile {
+    position: absolute;
+    height: 40.22%;
+    width: 9.87%;
+    top: 45.65%;
+    right: 32.27%;
+    bottom: 14.13%;
+    left: 57.87%;
+  }
+  .headingParent,
+  .navigation {
+    position: absolute;
+    top: 680px;
+    left: 0;
+    width: 375px;
+    height: 92px;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-darkgray-100);
+    font-family: var(--callout-medium);
+  }
+  .headingParent {
+    top: 40px;
+    height: 808px;
+    font-size: var(--callout-medium-size);
+    color: var(--color-dimgray);
+  }
+  .logo,
+  .logoChild {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  .logoChild {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-smi);
+    background-color: var(--no-image);
+  }
+  .logo {
+    top: 15px;
+    left: 15px;
+  }
+  .johannesburgSouthAfrica,
+  .michaelNdlovu {
+    position: absolute;
+    left: 15px;
+    line-height: 12px;
+  }
+  .michaelNdlovu {
+    top: 59px;
+    font-weight: 500;
+  }
+  .johannesburgSouthAfrica {
+    top: 121px;
+    color: var(--color-darkgray-200);
+  }
+  .shopify {
+    position: absolute;
+    top: 238px;
+    left: 294px;
+    width: 260px;
+    height: 160px;
+  }
+  .avatarIcon1,
+  .avatarIcon2,
+  .avatarIcon3,
+  .avatarIcon4 {
+    position: absolute;
+    top: 256px;
+    left: 37.5px;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+  .avatarIcon2,
+  .avatarIcon3,
+  .avatarIcon4 {
+    top: 255px;
+    left: 312px;
+    border-radius: 50%;
+  }
+  .avatarIcon3,
+  .avatarIcon4 {
+    top: 488px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+  }
+  .avatarIcon4 {
+    top: 688px;
+  }
+  .applyChild,
+  .groupChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 375px;
+  }
+  .applyChild {
+    height: 812px;
+    object-fit: cover;
+  }
+  .groupChild {
+    background-color: var(--color-gray-100);
+    height: 722px;
+  }
+  .input {
+    border: 0;
+    outline: 0;
+    font-family: var(--callout-medium);
+    font-size: var(--font-size-lg);
+    background-color: transparent;
+    position: absolute;
+    top: 1px;
+    left: 29px;
+    line-height: 18px;
+    color: var(--color-dimgray);
+    text-align: left;
+  }
+  .antDesignclockCircleOutlinIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .free,
+  .time {
+    position: absolute;
+  }
+  .time {
+    top: 222px;
+    left: 54px;
+    width: 108px;
+    height: 20px;
+  }
+  .free {
+    top: 223px;
+    left: 243px;
+    line-height: 18px;
+    color: var(--color-dimgray);
+  }
+  .uiDesignLead {
+    position: absolute;
+    top: 136px;
+    left: calc(50% - 112px);
+    font-size: var(--font-size-xl);
+    line-height: 20px;
+    font-weight: 600;
+  }
+  .spotify2,
+  .spotifyInner {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+  .spotifyInner {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xl);
+    background-color: var(--color-honeydew-200);
+  }
+  .spotify2 {
+    top: 46px;
+    left: 153px;
+  }
+  .capeTown,
+  .spotify3 {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    line-height: 14px;
+    font-weight: 500;
+  }
+  .capeTown {
+    left: 104px;
+    color: var(--color-dimgray);
+  }
+  .spotifyDetailsChild {
+    position: absolute;
+    top: 9px;
+    left: 56px;
+    border-top: 1.5px solid var(--color-gray-500);
+    box-sizing: border-box;
+    width: 16.5px;
+    height: 1.5px;
+  }
+  .locationIcon {
+    position: absolute;
+    top: 0;
+    left: 81px;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .spotifyDetails {
+    position: absolute;
+    top: 176px;
+    left: 85px;
+    width: 184px;
+    height: 18px;
+    font-size: var(--font-size-sm);
+  }
+  .buttonChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    width: 123px;
+    height: 50px;
+  }
+  .description {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    font-size: var(--font-size-sm);
+    line-height: 14px;
+    font-weight: 500;
+    font-family: var(--callout-medium);
+    color: var(--no-image);
+    text-align: left;
+  }
+  .button,
+  .buttonItem {
+    position: absolute;
+    height: 50px;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 272px;
+    left: 20px;
+    width: 123px;
+  }
+  .buttonItem {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-gray-200);
+    width: 111px;
+  }
+  .company {
+    position: absolute;
+    top: 18px;
+    left: 21px;
+    font-size: var(--font-size-sm);
+    line-height: 14px;
+    font-family: var(--callout-medium);
+    color: var(--color-dimgray);
+    text-align: left;
+  }
+  .button1,
+  .buttonInner {
+    position: absolute;
+    height: 50px;
+  }
+  .button1 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 272px;
+    left: 158px;
+    width: 111px;
+  }
+  .buttonInner {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-gray-200);
+    width: 104px;
+  }
+  .reviews {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    font-size: var(--font-size-sm);
+    line-height: 14px;
+    font-family: var(--callout-medium);
+    color: var(--color-dimgray);
+    text-align: left;
+  }
+  .button2 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 272px;
+    left: 284px;
+    width: 104px;
+    height: 50px;
+  }
+  .exceptionalCommunicationSkil {
+    position: absolute;
+    top: 38px;
+    left: 15px;
+    line-height: 24px;
+    display: inline-block;
+    width: 320px;
+  }
+  .qualificationsChild {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-gray-400);
+    width: 5px;
+    height: 5px;
+  }
+  .creativeWithAn {
+    position: absolute;
+    top: 105px;
+    left: 15px;
+    line-height: 28px;
+    display: inline-block;
+    width: 320px;
+  }
+  .qualificationsItem {
+    position: absolute;
+    top: 117px;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-gray-400);
+    width: 5px;
+    height: 5px;
+  }
+  .figmaxdSketch,
+  .knowThePrincipal {
+    position: absolute;
+    top: 154px;
+    left: 15px;
+    line-height: 24px;
+    display: inline-block;
+    width: 320px;
+  }
+  .figmaxdSketch {
+    top: 222px;
+  }
+  .ellipseDiv,
+  .qualificationsInner {
+    position: absolute;
+    top: 164px;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-gray-400);
+    width: 5px;
+    height: 5px;
+  }
+  .ellipseDiv {
+    top: 232px;
+  }
+  .qualifications1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--font-size-lg);
+    line-height: 18px;
+    font-weight: 500;
+    color: var(--color-gray-500);
+  }
+  .qualifications {
+    position: absolute;
+    top: 362px;
+    left: 20px;
+    width: 335px;
+    height: 246px;
+    text-align: left;
+    font-size: var(--footnote-semibold-size);
+    color: var(--color-dimgray);
+    font-family: var(--callout-medium);
+  }
+  .rectangleDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    width: 261px;
+    height: 54px;
+  }
+  .applyNow {
+    position: absolute;
+    top: 19px;
+    left: 87px;
+    font-size: var(--callout-medium-size);
+    line-height: 16px;
+    font-weight: 600;
+    font-family: var(--callout-medium);
+    color: var(--no-image);
+    text-align: center;
+  }
+  .button3,
+  .buttonChild1 {
+    position: absolute;
+    height: 54px;
+  }
+  .button3 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    top: 638px;
+    left: 20px;
+    width: 261px;
+  }
+  .buttonChild1 {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    width: 54px;
+  }
+  .chatIcon1 {
+    position: absolute;
+    height: 37.04%;
+    width: 37.04%;
+    top: 31.48%;
+    right: 31.48%;
+    bottom: 31.48%;
+    left: 31.48%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .button4 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 639px;
+    left: 301px;
+    width: 54px;
+    height: 54px;
+  }
+  .groupItem {
+    position: absolute;
+    top: 10px;
+    left: 148px;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-gainsboro-200);
+    width: 80px;
+    height: 4px;
+  }
+  .vectorParent {
+    position: absolute;
+    top: 93px;
+    left: 0;
+    width: 388px;
+    height: 722px;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    font-family: var(--callout-medium);
+  }
+  .avatarIcon5 {
+    position: absolute;
+    top: 144px;
+    left: 159px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  .apply {
+    width: 375px;
+    background-color: var(--color-gray-100);
+    max-width: 100%;
+    height: 812px;
+    overflow: hidden;
+    text-align: center;
+    font-size: var(--font-size-xs);
+    color: var(--color-dimgray);
+    font-family: var(--callout-medium);
+  }
+  

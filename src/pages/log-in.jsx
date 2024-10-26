@@ -39,8 +39,10 @@ const LogIn = () => {
         return "This user account has been disabled. Please contact support.";
       case 'auth/operation-not-allowed':
         return "This operation is not allowed. Please contact support.";
+      case 'auth/invalid-credential':
+        return "Wrong email address or password";
       default:
-        return "An unexpected error occurred. Please try again later.";
+        return "An unexpected error occurred. Please try again later. " + errorCode;
     }
   };
 

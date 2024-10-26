@@ -1,99 +1,80 @@
+import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../config/firebase";
 import styles from "./assets/css/message-person.module.css";
 
-const MessagePerson = () => {
+
+const MessagePerson = ({ senderId, receiverId }) => {
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState("");
+
+  const chatId = senderId < receiverId ? `${senderId}_${receiverId}` : `${receiverId}_${senderId}`;
+
+  useEffect(() => {
+    const messagesRef = collection(db, "chats", chatId, "messages");
+    const q = query(messagesRef, orderBy("timestamp", "asc"));
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const messagesData = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setMessages(messagesData);
+    });
+
+    return () => unsubscribe();
+  }, [chatId]);
+
+  const handleSendMessage = async () => {
+    if (newMessage.trim()) {
+      try {
+        const messagesRef = collection(db, "chats", chatId, "messages");
+        await addDoc(messagesRef, {
+          senderId,
+          receiverId,
+          text: newMessage,
+          timestamp: serverTimestamp()
+        });
+        setNewMessage("");
+      } catch (error) {
+        console.error("Error sending message: ", error);
+      }
+    }
+  };
+
   return (
     <div className={styles.messagePerson}>
       <div className={styles.header}>
         <button className={styles.link}>
-          <img
-            className={styles.chevronLeftIcon}
-            alt=""
-            src="/chevronleft@2x.png"
-          />
+          <img className={styles.chevronLeftIcon} alt="Back Button" src="/chevronleft.svg" />
         </button>
-        <img className={styles.avatarIcon} alt="" src="/avatar5@2x.png" />
+        <img className={styles.avatarIcon} alt="User Avatar" src="/avatar5@2x.png" />
         <div className={styles.rozanneBarrientes}>Anaya Sanji</div>
-        <img className={styles.buttonIcon} alt="" src="/button7.svg" />
+        <img className={styles.buttonIcon} alt="Call Button" src="/button7.svg" />
       </div>
+
       <section className={styles.message}>
         <div className={styles.myMessage}>
-          <div className={styles.div}>
-            <img
-              className={styles.rectangleCopyIcon}
-              alt=""
-              src="/rectangle-copy.svg"
-            />
-            <div className={styles.hello}>Hello</div>
-            <div className={styles.pm}>4:34 PM</div>
-          </div>
-          <div className={styles.div1}>
-            <img
-              className={styles.rectangleCopyIcon}
-              alt=""
-              src="/rectangle-copy-5.svg"
-            />
-            <div className={styles.howAreYou}>How are you?😜</div>
-            <div className={styles.pm1}>4:35 PM</div>
-          </div>
-          <div className={styles.div2}>
-            <img
-              className={styles.rectangleCopyIcon}
-              alt=""
-              src="/rectangle-copy-7.svg"
-            />
-            <div className={styles.okay}>
-              I heard u guys launching new product?
+          {messages.map((msg) => (
+            <div key={msg.id} className={styles.messageContainer}>
+              <div className={styles.hello}>{msg.text}</div>
+              <div className={styles.pm}>{msg.timestamp?.toDate().toLocaleTimeString() || "Sending..."}</div>
             </div>
-            <div className={styles.pmCopy}>4:35 PM</div>
-          </div>
-          <div className={styles.div3}>
-            <img
-              className={styles.rectangleCopy71}
-              alt=""
-              src="/rectangle-copy-71@2x.png"
-            />
-            <div className={styles.pmCopy3}>4:34 PM</div>
-            <div className={styles.okay1}>Thats Awesome 😍</div>
-          </div>
-          <div className={styles.div4}>
-            <img
-              className={styles.rectangleCopy4}
-              alt=""
-              src="/rectangle-copy-4.svg"
-            />
-            <div className={styles.didYouSee}>Yes, It calls UiHunt</div>
-            <div className={styles.pmCopy2}>4:34 PM</div>
-          </div>
-          <div className={styles.div5}>
-            <img
-              className={styles.rectangleCopy4}
-              alt=""
-              src="/rectangle-copy-3.svg"
-            />
-            <div className={styles.hello}>Hi</div>
-            <div className={styles.pmCopy1}>4:34 PM</div>
-          </div>
-          <div className={styles.div6}>
-            <img
-              className={styles.rectangleCopy4}
-              alt=""
-              src="/rectangle-copy-6.svg"
-            />
-            <div className={styles.niceBro}>Nice, bro🤟</div>
-            <div className={styles.pmCopy31}>4:34 PM</div>
-          </div>
+          ))}
         </div>
       </section>
-      <button className={styles.button}>
-        <div className={styles.rectangle} />
-        <img className={styles.plusIcon} alt="" src="/plus-icon@2x.png" />
-      </button>
+
       <div className={styles.input}>
-        <div className={styles.myMessage}>
-          <div className={styles.textMessagesInput} />
-          <div className={styles.text}>Type a message</div>
-        </div>
-        <img className={styles.buttonIcon1} alt="" src="/button8@2x.png" />
+        <input
+          className={styles.input1}
+          placeholder="Type a message"
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+        />
+        <button className={styles.button1} onClick={handleSendMessage}>
+          <img className={styles.buttonIcon1} alt="send message" src="/button8@2x.png" />
+        </button>
       </div>
     </div>
   );

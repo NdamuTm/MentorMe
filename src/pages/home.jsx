@@ -4,8 +4,10 @@ import { UserProfilePic } from "../components/profilePicgen.jsx";
 import { getMentors, getStudents } from "../services/dataService.js";
 import styles from "./assets/css/home.module.css";
 
-const UserCard = ({ name, career, location, avatarSrc }) => (
-  <div className={styles.userCard}>
+
+
+const UserCard = ({ name, career, location, avatarSrc,onClick }) => (
+  <div className={styles.userCard} onClick={onClick}>
     <div className={styles.flex}>
       <div className={styles.profileIcon}>
         <img className={styles.avatarIcon} alt="" src={avatarSrc} />
@@ -30,6 +32,11 @@ const RecentUserCard = ({ name, career, type, avatarSrc }) => (
     <div className={styles.mentorType}>{type}</div>
   </div>
 );
+
+function onMentorClick(id){
+  console.log("Mentor with id of: "+ id + " clicked" );
+
+}
 
 
 const Home = () => {
@@ -88,7 +95,17 @@ const Home = () => {
         <UserProfilePic /> 
         </Link>
       </div>
+      
       <div className={styles.searchBox}>
+        
+
+        <input
+          className={styles.searchForTutors}
+          name="search"
+          id="search"
+          placeholder="Search for Tutors Here..."
+          type="text"
+        />
         <button className={styles.link2} id="search">
           <div className={styles.linkItem} />
           <img
@@ -97,48 +114,20 @@ const Home = () => {
             src="/adjusthorizontalalt@2x.png"
           />
         </button>
-        <input
-          className={styles.searchBoxChild}
-          name="search"
-          id="search"
-          type="text"
-        />
-        <input
-          className={styles.searchForTutors}
-          name="search"
-          id="search"
-          placeholder="Search for Tutors Here..."
-          type="text"
-        />
       </div>
       <section className={styles.popularTutors}>
         <div className={styles.recentTutors}>Popular Tutors</div>
         <div className={styles.showAll}>Show All</div>
         <div className={styles.popularTutorsSlider} id="popular-tutors-slider">
-          <div className={styles.userCard} id="user-card">
 
-            
-            <div className={styles.flex}>
-              <div className={styles.profileIcon}>
-              <img className={styles.avatarIcon} alt="" src="/avatar1@2x.png" />
-            </div>
-            <img className={styles.likeBtnIcon} alt="" src="/likebtn@2x.png" />
-            </div>
-            <div className={styles.cardUsername}>Michael Ndlovu</div>
-            <div
-              className={styles.career}
-            >{`Finance & Accounting`}</div>
-            <div className={styles.location}>
-              Johannesburg, South Africa
-            </div>
-         </div>
          {mentors.map((mentor, index) => (
                     <UserCard 
                         key={mentor.id} 
                         name={`${mentor.name} ${mentor.surname}`} 
-                        career={mentor.industry || "N/A"} // Provide a default value if industry is empty
+                        career={mentor.industry || "N/A"} 
                         location={`${mentor.city}, ${mentor.province}`} 
-                        avatarSrc={mentor.avatarSrc || "default_avatar_url"} // Replace with a valid URL if available
+                        avatarSrc={mentor.profilePic || "default_avatar_url"} 
+                        onClick={() => onMentorClick(mentor.id)}
                     />
                 ))}
 
@@ -150,12 +139,7 @@ const Home = () => {
 
 
         <div className={styles.recentUserList}>
-        <RecentUserCard 
-          name="Sar" 
-          career="Mark" 
-          type="Peer Mentor" 
-          avatarSrc="/avatar3@2x.png" 
-        />
+
                     {students.map((student) => (
               <RecentUserCard 
                 key={student.id} 

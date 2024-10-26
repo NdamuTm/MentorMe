@@ -96,6 +96,10 @@
 .searchForTutors {
   position: absolute;
   left: 1.25rem;
+  background: white;
+  box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(225, 223, 221);
+  border-radius: 1rem;
 }
 .searchForTutors {
   border: 0;
@@ -103,7 +107,7 @@
   font-family: var(--callout-medium);
   font-size: var(--callout-medium-size);
   background-color: transparent;
-  top: 1.188rem;
+  top: 1rem;
   line-height: 1rem;
   color: var(--color-dimgray);
   text-align: left;
@@ -289,9 +293,8 @@
   left: 57.87%;
 }
 .navigation {
-  position: absolute;
-  top: 45rem;
-  left: 0;
+  position:fixed;
+  bottom: 0;
   width: 23.438rem;
   height: 5.75rem;
 }
@@ -324,6 +327,7 @@
   min-width: 15rem;
   flex-direction: column;
   scroll-snap-align: center;
+  margin-top: 1rem;
 }
 
 .flex1{
@@ -390,7 +394,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   gap: 1rem;
-  padding-right: 1.5rem;
+  padding-right: 4rem;
 
 }
 .popularTutors {
@@ -419,7 +423,7 @@
 
 
 .recentUserList {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 20.938rem;
   display: flex;
   flex-direction: column;
@@ -464,7 +468,7 @@
 .recent {
   position: absolute;
   width: 20.938rem;
-  top: 26.75rem;
+  top: 23.75rem;
   left: 1.25rem;
   height: 20rem;
   text-align: left;
@@ -475,4 +479,17 @@
 
 .main{
   overflow-y: scr;
+}
+
+
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+
+.ontop{
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
 }

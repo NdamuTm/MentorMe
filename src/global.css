@@ -67,3 +67,8 @@ body {
   --br-2xs: 11px;
   --br-36xl: 55px;
 }
+
+
+.flex{
+  display: flex;
+}
