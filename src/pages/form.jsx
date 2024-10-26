@@ -6,19 +6,14 @@ const Form = () => {
       <img className={styles.headerIcon} alt="" src="/header@2x.png" />
       <div className={styles.first}>
         <input className={styles.firstChild} type="text" />
-        <div className={styles.input}>Ndamulelo</div>
-        <input
-          className={styles.firstName}
-          name="firstname"
-          id="firstname"
-          value="First Name"
-          placeholder="Ndamulelo"
-          type="text"
-        />
+
       </div>
       <div className={styles.emai}>
-        <input className={styles.firstChild} type="text" />
-        <div className={styles.input1}>ndamutm23@gmail.com</div>
+        <input className={styles.firstChild} type="text" 
+           placeholder="Your Email"
+
+        />
+
         <div className={styles.yourEmail}>Your Email</div>
       </div>
       <div className={styles.country}>
@@ -54,13 +49,13 @@ const Form = () => {
         placeholder="Rasendedza"
         type="text"
       />
-      <button className={styles.button}>
+      {/* <button className={styles.button}>
         <div className={styles.lastName1}>Last Name</div>
         <div className={styles.button1}>
           <div className={styles.buttonChild} />
         </div>
         <div className={styles.applyNow}>Apply Now</div>
-      </button>
+      </button> */}
     </div>
   );
 };
