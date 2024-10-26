@@ -392,7 +392,7 @@ function showMentor(){
 }
 
 function HideStudent(){
-  //hide divs
+  //hide divsz
   document.getElementById("Campus_Div").style.display = "none"
   document.getElementById("Year_Div").style.display = "none"
   //uncheck radio button
