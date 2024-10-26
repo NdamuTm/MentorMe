@@ -1,13 +1,13 @@
 import styles from "./assets/css/message.module.css";
 
 
-const userCard =({ name, career, location, avatarSrc,onClick }) => (
+const UserCard =({ name, avatar,messagecontent }) => (
   <div className={styles.div}>
-   <img className={styles.avatarIcon} alt="" src="/avatar6@2x.png" />
+   <img className={styles.avatarIcon} alt="" src={avatar} />
     <div className={styles.messageContent}>
-    <div className={styles.h1}>Rozanne Barrientes</div>
+    <div className={styles.h1}>{name}</div>
     <div className={styles.p}>
-      A wonderful serenity has taken...
+      {messagecontent}
     </div>
     </div>
     <div className={styles.notification}>
@@ -15,6 +15,10 @@ const userCard =({ name, career, location, avatarSrc,onClick }) => (
     </div>
   </div>
 );
+
+function nam(name,email,hahuc){
+  console.log(name,email,hahuc)
+}
 
 
 
@@ -83,6 +87,19 @@ const Message = () => {
         </div>
         
       </div>
+
+      <UserCard
+          name="ndamu"
+          avatar="/avatar6@2x.png"
+          messagecontent="Hi Ndamu, how are you?"
+  
+      />
+      <UserCard
+          name="ndamus"
+          avatar="/avatar6@2x.png"
+          messagecontent="Hi Ndamu, how are you?"
+  
+      />
  
       
 

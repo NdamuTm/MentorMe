@@ -1,23 +1,24 @@
 import { useEffect } from "react";
 import {
-  Routes,
   Route,
-  useNavigationType,
+  Routes,
   useLocation,
+  useNavigationType,
 } from "react-router-dom";
-import Home from "./pages/home";
-import Form from "./pages/form";
-import Splash from "./pages/splash";
-import LogIn from "./pages/log-in";
-import InCall from "./pages/in-call";
-import MessagePerson from "./pages/message-person";
-import Message from "./pages/message";
-import Notification1 from "./pages/notification1";
 import Applications from "./pages/applications";
+import Form from "./pages/form";
+import Home from "./pages/home";
+import InCall from "./pages/in-call";
+import LogIn from "./pages/log-in";
+import Menu from "./pages/menu";
+import Message from "./pages/message";
+import MessagePerson from "./pages/message-person";
+import Notification1 from "./pages/notification1";
 import Profile from "./pages/profile";
 import Search from "./pages/search";
-import Menu from "./pages/menu";
+import SetUp from "./pages/set-up";
 import SignUp from "./pages/sign-up";
+import Splash from "./pages/splash";
 
 function App() {
   const action = useNavigationType();
@@ -87,6 +88,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/set-up":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -118,6 +123,7 @@ function App() {
       <Route path="/search" element={<Search />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/set-up" element={<SetUp />} />
     </Routes>
   );
 }
