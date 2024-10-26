@@ -31,29 +31,30 @@ const Search = () => {
   }, []);
 
 const UserCard = ({ name, Campus, Qualification, avatar }) => (
-  <div >
-          <div className={styles.fbChild} />
-          <div className={styles.facebook}>
+  <div className={styles.card_container}>
+          <span className={styles.image_container}>
             <img className={styles.avatarIcon3} alt="" src={avatar} />
-            <div className={styles.facebookItem} />
-            <div className={styles.div} />
-          </div>
-          <div className={styles.aneleNdlovu}>{name}</div>
-          <div className={styles.capeTown}>{Campus}</div>
-          <div className={styles.uiuxDesign}>{Qualification}</div>
+            <span className={styles.facebookItem} />
+            <span className={styles.div}> </span>
+          </span>
+          <span className={styles.card_info}>
+              <span className={styles.aneleNdlovu}>{name}</span>
+              <span className={styles.capeTown}>{Campus}</span>
+              <span className={styles.uiuxDesign}>{Qualification}</span>
+          </span>
           <button className={styles.button3}>
-          <img
-              className={styles.ellipseIcon}
-              alt=""
-              src="/ellipse-58@2x.png"
-            />
-            <img
-              className={styles.path3392Icon}
-              alt=""
-              src="/path-3392@2x.png"
-            />
-          </button>
-        </div>
+                <img
+                    className={styles.image}
+                    alt=""
+                    src="/ellipse-58@2x.png"
+                  />
+                  <img
+                    className={styles.path3392Icon}
+                    alt=""
+                    src="/path-3392@2x.png"
+                  />
+              </button>
+    </div>
 );
 {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
@@ -97,10 +98,10 @@ const UserCard = ({ name, Campus, Qualification, avatar }) => (
             {users.map((user) => (
               <UserCard
                 key={user.id}
-                name={user.name}
+                name={user.name || "test user"}
                 avatar={user.avatar || "/default-avatar.png"} 
-                Qualification={user.Qualification}
-                Campus={user.Campus}
+                Qualification={user.Qualification || "software engineer"}
+                Campus={user.Campus || "NMB campus"}
               /> 
             ))}
 
