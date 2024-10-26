@@ -174,12 +174,13 @@ const Home = () => {
       {/* Selected Mentor Detail Section */}
       {selectedMentor && (
   <div className={styles.selectedMentorDetail}>
+    <button onClick={closeMentorDetail}>Close</button>
     <Apply
       className={styles.apply}
       senderId={senderId}
       receiverId={selectedMentor.id}
     />
-    <button onClick={closeMentorDetail}>Close</button>
+    
   </div>
 )}
 

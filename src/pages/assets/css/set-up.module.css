@@ -1,489 +1,56 @@
-.headerIcon {
-  position: absolute;
-  top: 2.5rem;
-  right: 0.75rem;
-  width: 21.438rem;
-  height: 1.875rem;
-  object-fit: contain;
-}
-.firstChild {
-  border: 0.5px solid var(--color-gainsboro-100);
-  outline: 0;
-  background-color: var(--no-image);
-  position: absolute;
-  top: 1.675rem;
-  right: 0;
-  border-radius: var(--br-4xs);
-  box-sizing: border-box;
-  width: 10rem;
-  height: 3.269rem;
-}
-.firstName,
-.input {
-  position: absolute;
-  display: inline-block;
-}
-.input {
-  top: 2.875rem;
-  right: 3.775rem;
+.input{
   line-height: 0.875rem;
   font-weight: 500;
-  width: 5.456rem;
-  height: 0.881rem;
-}
-.firstName {
-  border: 0;
-  outline: 0;
-  font-family: var(--callout-medium);
-  font-size: var(--callout-medium-size);
-  background-color: transparent;
-  top: 0;
-  right: 4.063rem;
-  line-height: 1rem;
-  color: var(--color-dimgray);
-  text-align: left;
-  width: 5.938rem;
-}
-.first {
-  position: absolute;
-  top: 6.875rem;
-  right: 12.188rem;
-  width: 10rem;
-  height: 4.95rem;
-}
-.emaiChild {
   border: 0.5px solid var(--color-gainsboro-100);
   outline: 0;
-  background-color: var(--no-image);
-  position: absolute;
-  top: 1.719rem;
-  right: 0;
-  border-radius: var(--br-4xs);
-  box-sizing: border-box;
-  width: 20.938rem;
-  height: 3.269rem;
-}
-.emaiChild::placeholder{
-  padding-left: 11.938rem;
-}
-.input1 {
-  position: absolute;
-  top: 2.913rem;
-  right: 8.625rem;
-  line-height: 0.875rem;
-  display: inline-block;
-  width: 11.063rem;
-  height: 0.881rem;
-}
-.yourEmail {
-  position: absolute;
-  top: 0;
-  right: 15.688rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.emai {
-  position: absolute;
-  top: 13.625rem;
-  right: 1.25rem;
-  width: 20.938rem;
-  height: 4.988rem;
-}
-.countryChild {
-  border: 0.5px solid var(--color-gainsboro-100);
-  outline: 0;
-  background-color: var(--no-image);
-  top: 1.763rem;
-  right: 0;
-  border-radius: var(--br-4xs);
-  box-sizing: border-box;
-  width: 20.938rem;
-  height: 3.269rem;
-}
-.campus,
-.countryChild,
-.input2 {
-  position: absolute;
-}
-.input2 {
-  top: 2.956rem;
-  right: 7.563rem;
-  line-height: 0.875rem;
-  display: inline-block;
-  width: 12.5rem;
-  height: 0.881rem;
-}
-.campus {
-  top: 0;
-  right: 16.563rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.buttonIcon {
-  position: absolute;
-  top: 3rem;
-  right: 1.25rem;
-  width: 0.813rem;
-  height: 0.438rem;
-  object-fit: contain;
-}
-.country {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20.938rem;
-  height: 5.031rem;
-}
-.courseName {
-  top: 0;
-  right: 14.063rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country1,
-.courseName,
-.year {
-  position: absolute;
-}
-.country1 {
-  top: 6.813rem;
-  right: 0;
-  width: 20.938rem;
-  height: 5.031rem;
-}
-.year {
-  top: 0;
-  right: 18.625rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country2,
-.student {
-  position: absolute;
-  width: 20.938rem;
-}
-.country2 {
-  top: 13rem;
-  right: 0;
-  height: 5.031rem;
-}
-.student {
-  top: 23.625rem;
-  right: 1.25rem;
-  height: 18.031rem;
-}
-.interest {
-  position: absolute;
-  top: 0;
-  right: 17.188rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country3 {
-  position: absolute;
-  top: 70.25rem;
-  right: 1.25rem;
-  width: 20.938rem;
-  height: 5.031rem;
-}
-.experience {
-  position: absolute;
-  top: 0;
-  right: 15.5rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country4 {
-  position: absolute;
-  top: 20.375rem;
-  right: 0;
-  width: 20.938rem;
-  height: 5.031rem;
-}
-.organization {
-  position: absolute;
-  top: 0;
-  right: 14.5rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country6 {
-  position: absolute;
-  top: 13.625rem;
-  right: 0;
-  width: 20.938rem;
-  height: 5.031rem;
-}
-.industry {
-  position: absolute;
-  top: 0;
-  right: 16.875rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  color: var(--color-dimgray);
-}
-.country7 {
-  top: 6.75rem;
-  right: 0;
-  height: 5.031rem;
-}
-.country7,
-.inputChild,
-.mentor {
-  position: absolute;
-  width: 20.938rem;
-}
-.mentor {
-  top: 43.438rem;
-  right: 1.25rem;
-  height: 25.406rem;
-}
-.inputChild {
-  top: 0;
-  right: 0;
-  border-radius: var(--br-4xs);
-  background-color: var(--no-image);
-  height: 7.138rem;
-
-}
-.input11 {
-  position: absolute;
-  top: 0.613rem;
-  right: 0rem;
-  line-height: 1.5rem;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: var(--no-image);
-  border: 0.5px solid var(--color-gainsboro-100);
-  wrap:"hard";
-}
-.input11:focus{
-  background-color: var(--no-image);
-  border: 0.5px solid var(--color-gainsboro-100);
-  outline: none; /* Optional: removes the default outline */
-}
-.input10 {
-  position: absolute;
-  top: 1.769rem;
-  right: 0;
-  width: 20.938rem;
-  height: 7.138rem;
-}
-.message1 {
-  position: absolute;
-  top: 0;
-  right: 16.375rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  font-family: var(--callout-medium);
-  color: var(--color-dimgray);
-  display: inline-block;
-  width: 4.563rem;
-  height: 0.981rem;
-}
-.message {
-  position: absolute;
-  top: 77.063rem;
-  right: 1.25rem;
-  width: 20.938rem;
-  height: 8.906rem;
-  text-align: left;
+  font-weight: 500;
   font-size: var(--font-size-sm);
+  background-color: var(--no-image);
+  border-radius: var(--br-4xs);
+  padding: 0.8rem;
   color: var(--color-gray-500);
-  font-family: var(--font-overpass);
+  width: 100%;
 }
-.inputItem,
-.uploadHere {
-  position: absolute;
-  top: 0;
-  right: 0;
+
+.setup{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
-.inputItem {
-  border: 0.5px solid var(--color-gainsboro-100);
-  outline: 0;
-  background-color: var(--no-image);
-  border-radius: var(--br-4xs);
-  box-sizing: border-box;
-  width: 20.938rem;
-  height: 4.4rem;
-}
-.uploadHere {
-  line-height: 0.875rem;
-  font-weight: 500;
-}
-.icon {
-  position: absolute;
-  top: 1.756rem;
-  right: 2.375rem;
-  width: 0.688rem;
-  height: 0.881rem;
-  object-fit: cover;
-}
-.uploadHereParent {
-  position: absolute;
-  top: 0.756rem;
-  right: 7.625rem;
-  width: 5.438rem;
-  height: 2.638rem;
-}
-.input12 {
-  position: absolute;
-  top: 1.869rem;
-  right: 0;
-  width: 20.938rem;
-  height: 4.4rem;
-}
-.profilePicture {
-  position: absolute;
-  top: 0;
-  right: 14.188rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  text-align: left;
-}
-.cv {
-  position: absolute;
-  top: 87.75rem;
-  right: 0.875rem;
-  width: 20.938rem;
-  height: 6.269rem;
-  text-align: center;
-  font-size: var(--font-size-sm);
-  color: var(--color-dimgray);
-  font-family: var(--callout-medium);
-}
-.lastNameChild {
-  position: absolute;
-  top: 1.688rem;
-  right: 0;
-  border-radius: var(--br-4xs);
-  background-color: var(--no-image);
-  border: 0.5px solid var(--color-gainsboro-100);
-  box-sizing: border-box;
-  width: 10.188rem;
-  height: 3.25rem;
-  outline: none;
-}
-.input13,
-.lastName1 {
-  position: absolute;
-  display: inline-block;
-}
-.input13 {
-  top: 2.831rem;
-  right: 3.1rem;
-  line-height: 0.875rem;
-  font-weight: 500;
-  width: 6.5rem;
-  height: 0.906rem;
-}
-.lastName1 {
-  border: 0;
-  outline: 0;
-  font-family: var(--callout-medium);
-  font-size: var(--callout-medium-size);
-  background-color: transparent;
-  top: 0;
-  right: 3.906rem;
-  line-height: 1rem;
-  color: var(--color-dimgray);
-  text-align: left;
-  width: 6.281rem;
-  height: 1.025rem;
-}
-.lastName {
-  position: absolute;
-  top: 6.875rem;
-  right: 1.25rem;
-  width: 10.188rem;
-  height: 4.938rem;
-}
-.buttonChild {
-  position: absolute;
-  border-radius: var(--br-xs);
-  background-color: var(--color-cadetblue);
-}
-.button1,
-.buttonChild {
-  top: 0;
-  right: 0;
-  width: 20.938rem;
-  height: 3.375rem;
-}
-.button,
-.button1,
-.save {
-  position: absolute;
-}
-.save {
-  top: 1.188rem;
-  right: 9.188rem;
-  font-size: var(--callout-medium-size);
-  line-height: 1rem;
-  font-weight: 600;
-  font-family: var(--callout-medium);
-  color: var(--no-image);
-  text-align: center;
-}
+
+
 .button {
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: transparent;
-  top: 95.813rem;
-  right: 0.875rem;
-  width: 20.938rem;
-  height: 3.375rem;
-}
-.switchOffIcon {
-  position: absolute;
-  top: 0.188rem;
-  left: 18.438rem;
-  width: 2.5rem;
-  height: 1.5rem;
-}
-.mentorOrStudent {
-  position: absolute;
-  top: 0;
-  left: 6rem;
-  font-weight: 500;
-  display: flex;
-}
-.radio_label_1{
-  accent-color: green;
-}
-.radio_label_2{
-  margin-left: 1rem;
-  accent-color: green;
-}
-.div {
-  position: absolute;
-  top: 20.188rem;
-  left: 1.125rem;
-  width: 20.938rem;
-  height: 1.875rem;
-  font-size: var(--font-size-xl);
-}
-.setup {
+  background-color: #4CA6A8;
   width: 100%;
-  position: relative;
-  background-color: var(--color-gray-100);
-  height: 101.688rem;
-  text-align: left;
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-500);
+  font-size: var(--callout-medium-size);
+  line-height: 1rem;
+  font-weight: 600;
   font-family: var(--callout-medium);
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--br-4xs);
+  color: white;
 }
 
-.Hidden{
-  display: none;
+.inputGroup{
+  display: flex;
+  gap: 1rem;
+
+flex-direction: column;
+}
+
+.flex{
+  display: flex;
+  gap: .3rem;
+}
+
+.inputGroup label{
+  font-size: var(--callout-medium-size);
+  font-family: var(--callout-medium);
+  line-height: 1rem;
+  color: var(--color-dimgray);
 }

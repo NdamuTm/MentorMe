@@ -825,25 +825,17 @@
     color: var(--color-dimgray);
     font-family: var(--callout-medium);
   }
-  .rectangleDiv {
 
-    top: 0;
-    left: 0;
-    border-radius: var(--br-xs);
-    background-color: var(--color-cadetblue);
-    width: 261px;
-    height: 54px;
-  }
   .applyNow {
-
-    top: 19px;
-    left: 87px;
     font-size: var(--callout-medium-size);
     line-height: 16px;
     font-weight: 600;
     font-family: var(--callout-medium);
     color: var(--no-image);
     text-align: center;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    padding: 1.3rem;
   }
   .button3,
   .buttonChild1 {
@@ -859,36 +851,24 @@
     left: 20px;
     width: 261px;
   }
-  .buttonChild1 {
-    top: 0;
-    left: 0;
-    border-radius: var(--br-xs);
-    background-color: var(--color-cadetblue);
-    width: 54px;
-  }
+
   .chatIcon1 {
 
-    height: 37.04%;
-    width: 37.04%;
-    top: 31.48%;
-    right: 31.48%;
-    bottom: 31.48%;
-    left: 31.48%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
+    height: 1.4rem;
+    width: 1.4rem;
+
     object-fit: cover;
+    
   }
+
   .button4 {
     cursor: pointer;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-
-    top: 639px;
-    left: 301px;
-    width: 54px;
-    height: 54px;
+    border-radius: var(--br-xs);
+    background-color: var(--color-cadetblue);
+    padding: 1rem;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
   }
   .groupItem {
 
@@ -928,3 +908,36 @@
     font-family: var(--callout-medium);
   }
   
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.imgBackground{
+    border-radius: 50%;
+    background-color: var(--color-honeydew-200);
+    padding: .5rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.imgBackground img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+
+}

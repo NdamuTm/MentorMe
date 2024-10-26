@@ -55,7 +55,7 @@ const SignUp = () => {
         displayName: name,
       });
 
-      window.location.href = '/'; // Redirect to homepage after signup
+      window.location.href = '/set-up'; // Redirect to homepage after signup
     } catch (err) {
       setError(getErrorMessage(err.code)); // Get user-friendly error message
       setOpenDialog(true); // Open dialog on error

@@ -1,6 +1,5 @@
 import "firebase/firestore";
-import { collection, getDocs } from 'firebase/firestore';
-
+import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
 
@@ -85,3 +84,36 @@ export async function getNotifications() {
         return null;
     }
 }
+
+
+
+export const createMentor = async (mentorData) => {
+  try {
+    const docRef = doc(db, "mentors", mentorData.u_id);
+    await setDoc(docRef, mentorData);
+    console.log("Mentor created successfully");
+    createUser(mentorData);
+  } catch (error) {
+    console.error("Error creating mentor:", error);
+  }
+};
+
+export const createStudent = async (studentData) => {
+  try {
+    const docRef = doc(db, "students", studentData.u_id);
+    await setDoc(docRef, studentData);
+    console.log("Student created successfully");
+    createUser(studentData);
+  } catch (error) {
+    console.error("Error creating student:", error);
+  }
+};
+export const createUser = async (userData) => {
+  try {
+    const docRef = doc(db, "users", userData.u_id);
+    await setDoc(docRef, userData);
+    console.log("User created successfully");
+  } catch (error) {
+    console.error("Error creating student:", error);
+  }
+};
