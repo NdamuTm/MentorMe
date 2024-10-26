@@ -1,3 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .buttonChild,
 .headerIcon {
   position: absolute;
@@ -126,7 +147,7 @@
   width: 8.75rem;
   height: 3.125rem;
 }
-.fbChild,
+/* .fbChild, */
 .most {
   position: absolute;
   left: 0;
@@ -144,9 +165,9 @@
   width: 20.938rem;
   height: 6.25rem;
 }
-.facebook,
+/* .facebook, */
 .facebookChild {
-  /* position: absolute; */
+  position: absolute;
   width: 3.125rem;
   height: 3.125rem;
 }
@@ -169,7 +190,7 @@
   font-weight: 600;
   color: var(--color-gray-500);
 }
-.capeTown,
+/* .capeTown, */
 .uiuxDesign {
   /* position: absolute; */
   top: 1.375rem;
@@ -214,7 +235,7 @@
   bottom: 60%;
   left: 88.06%;
 }
-.facebookItem,
+/* .facebookItem, */
 .fb {
   position: absolute;
   left: 0;
@@ -232,7 +253,7 @@
   height: 3.125rem;
 }
 .div {
-  position: absolute;
+  /* position: absolute; */
   top: 0.625rem;
   left: 0.625rem;
   width: 1.875rem;
@@ -240,7 +261,7 @@
   overflow: hidden;
 }
 .aneleNdlovu {
-  position: absolute;
+  /* position: absolute; */
   top: 2.5rem;
   left: 5.625rem;
   font-size: var(--callout-medium-size);
@@ -253,8 +274,31 @@
   top: 22.125rem;
   left: 0;
   width: 20.938rem;
-  height: 6.25rem;
+  /* height: 6.25rem; */
+  height: 100%;
+  
 }
+.card_container{
+  width: 20rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+.card_info{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 5rem;
+}
+.image_container{
+  width : 4rem;
+  height: 4rem;
+}
+.image{
+  width: 100%;
+  height: 100%;
+}
+
 .facebookInner {
   position: absolute;
   top: 0;
@@ -288,7 +332,7 @@
   height: 6.25rem;
 }
 .facebookChild1 {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   left: 0;
   border-radius: var(--br-mini);
@@ -354,9 +398,9 @@
   color: var(--color-dimgray);
   font-family: var(--callout-medium);
 }
-.avatarIcon3,
+/* .avatarIcon3, */
 .avatarIcon4 {
-  /* position: absolute; */
+  position: absolute;
   top: 19rem;
   left: 2.813rem;
   border-radius: 50%;
