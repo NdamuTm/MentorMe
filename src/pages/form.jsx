@@ -9,7 +9,7 @@ const Form = ({ receiverId }) => {
     firstname: "",
     lastname: "",
     email: "",
-    campus: "Bedfordview",
+    campus: "",
     message: "",
     senderId: auth.currentUser?.uid || "", 
     receiverId: receiverId || "", 
