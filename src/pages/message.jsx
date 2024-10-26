@@ -1,30 +1,39 @@
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../config/firebase"; // Ensure the path is correct
 import styles from "./assets/css/message.module.css";
 
-
-const UserCard =({ name, avatar,messagecontent }) => (
+const UserCard = ({ name, avatar, messagecontent }) => (
   <div className={styles.div}>
-   <img className={styles.avatarIcon} alt="" src={avatar} />
+    <img className={styles.avatarIcon} alt="" src={avatar} />
     <div className={styles.messageContent}>
-    <div className={styles.h1}>{name}</div>
-    <div className={styles.p}>
-      {messagecontent}
+      <div className={styles.h1}>{name}</div>
+      <div className={styles.p}>{messagecontent}</div>
     </div>
-    </div>
-    <div className={styles.notification}>
-      2
-    </div>
+    <div className={styles.notification}>2</div>
   </div>
 );
-
-function nam(name,email,hahuc){
-  console.log(name,email,hahuc)
-}
-
-
-
-
-
 const Message = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const usersCollection = collection(db, "users");
+        const usersSnapshot = await getDocs(usersCollection);
+        const usersList = usersSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setUsers(usersList);
+      } catch (error) {
+        console.error("Error fetching users: ", error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
   return (
     <div className={styles.message}>
       <section className={styles.navigation}>
@@ -50,8 +59,6 @@ const Message = () => {
         </div>
       </section>
 
-
-
       <div className={styles.header}>
         <div className={styles.message1}>Message</div>
         <img className={styles.linkIcon1} alt="" src="/chevronleft.svg" />
@@ -59,49 +66,14 @@ const Message = () => {
       </div>
 
 
-      <div className={styles.div}>
-
-      <img className={styles.avatarIcon} alt="" src="/avatar6@2x.png" />
-        <div className={styles.messageContent}>
-        <div className={styles.h1}>Rozanne Barrientes</div>
-        <div className={styles.p}>
-          A wonderful serenity has taken...
-        </div>
-        </div>
-        <div className={styles.notification}>
-          2
-        </div>
-        
-      </div>
-      <div className={styles.div}>
-
-      <img className={styles.avatarIcon} alt="" src="/avatar6@2x.png" />
-        <div className={styles.messageContent}>
-        <div className={styles.h1}>Roztes</div>
-        <div className={styles.p}>
-          A wo
-        </div>
-        </div>
-        <div className={styles.notification}>
-          2
-        </div>
-        
-      </div>
-
-      <UserCard
-          name="ndamu"
-          avatar="/avatar6@2x.png"
-          messagecontent="Hi Ndamu, how are you?"
-  
-      />
-      <UserCard
-          name="ndamus"
-          avatar="/avatar6@2x.png"
-          messagecontent="Hi Ndamu, how are you?"
-  
-      />
- 
-      
+      {users.map((user) => (
+        <UserCard
+          key={user.id}
+          name={user.name}
+          avatar={user.avatar || "/default-avatar.png"} 
+          messagecontent="Hi, how are you?"
+        />
+      ))}
 
       <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />
     </div>
