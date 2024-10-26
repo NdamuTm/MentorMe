@@ -1,11 +1,7 @@
 import { UserProfilePic } from "../components/profilePicgen.jsx";
 import styles from "./assets/css/profile.module.css";
 
-
 const Profile = () => {
-
-
-
 
   return (
     <div className={styles.profile}>
