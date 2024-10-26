@@ -178,45 +178,5 @@ const SetUp = () => {
 };
 
 
-function HideMentor(){
-    //hide divs
-    document.getElementById("Organization_Div").style.display = "none"
-    document.getElementById("Industry_Div").style.display = "none"
-    document.getElementById("Qualifications_Div").style.display = "none"
-    document.getElementById("Experience_Div").style.display = "none"
-    //uncheck radio button
-    document.getElementById("Mentor_rd").checked = false;
-
-    showStudent()//show student options
-}
-function showMentor(){
-  document.getElementById("Organization_Div").style.display = "Block"
-  document.getElementById("Industry_Div").style.display = "Block"
-  document.getElementById("Qualifications_Div").style.display = "Block"
-  document.getElementById("Experience_Div").style.display = "Block"
-  //uncheck radio button
-  document.getElementById("Mentor_rd").checked = true;
-
-}
-
-function HideStudent(){
-  //hide divs
-  document.getElementById("Campus_Div").style.display = "none"
-  document.getElementById("Year_Div").style.display = "none"
-  //uncheck radio button
-  document.getElementById("Student_rd").checked = false;
-
-  showMentor()//show mentor options
-}
-
-function showStudent(){
-  document.getElementById("Campus_Div").style.display = "Block"
-  document.getElementById("Year_Div").style.display = "Block"
-  //uncheck radio button
-  document.getElementById("Student_rd").checked = true;
-}
-
-//firstname, lastname, email, Campus, Course_Name, Year, Interest, Experience, Bio, Organization, Qualifications, Industry
-
 
 export default SetUp;
