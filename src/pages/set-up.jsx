@@ -26,12 +26,10 @@ const SetUp = () => {
         placeholder="example@gmail.com"
         name = "email"
         id="email"
-        
         />
-        
         <div className={styles.yourEmail}>Your Email</div>
       </div>
-      <div className={styles.student}>
+      <div className={styles.student} id="Campus_Div">
         <div className={styles.country}>
           {/* <input className={styles.countryChild} 
           type="text" 
@@ -41,6 +39,7 @@ const SetUp = () => {
           
           /> */}
           <select className={styles.countryChild} name="Campus" id="Campus">
+              <option value="">Select</option>
               <option value="bedfordview">Bedfordview</option>
               <option value="bloemfontein">Bloemfontein</option>
               <option value="cape-town-mowbray">Cape Town (Mowbray)</option>
@@ -55,7 +54,7 @@ const SetUp = () => {
               <option value="vanderbijlpark">Vanderbijlpark</option>
         </select>
 
-          <div className={styles.campus}>Campus</div>
+          <div className={styles.campus} id="Course_Name_Div">Campus</div>
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
         </div>
         <div className={styles.country1}>
@@ -238,14 +237,20 @@ const SetUp = () => {
 				</select>
 
         </div>
-        <div className={styles.country2}>
-          <input className={styles.countryChild} 
+        <div className={styles.country2} id="Year_Div">
+          {/* <input className={styles.countryChild} 
               type="text" 
               placeholder="Second Year Student"
               name="Year" 
               id="Year"
               
-          />
+          /> */}
+          <select className={styles.countryChild} name="Year" id="Year">
+            <option value="">Select</option>
+            <option value="1st Year">1st Year</option>
+            <option value="2st Year">2st Year</option>
+            <option value="3st Year">3st Year</option>
+          </select>
 
           <div className={styles.year}>Year</div>
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
@@ -257,15 +262,14 @@ const SetUp = () => {
             placeholder="Web Dev" 
             name="Interest" 
             id="Interest"
-            
             />
         <div className={styles.interest}>Interest</div>
         {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
       </div>
       <div className={styles.mentor}>
-        <div className={styles.country4}>
+        <div className={styles.country4} id="Experience_Div">
           {/* <input className={styles.countryChild} type="text" placeholder="5-8years"/> */}
-          <div className={styles.experience}>Experience</div>
+          <div className={styles.experience} >Experience</div>
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
           <select className={styles.countryChild} name="Experience" id="Experience">
               <option value="0-1 years">0-1 years</option>
@@ -274,27 +278,27 @@ const SetUp = () => {
               <option value="6+ years">6+ years</option>
           </select>
         </div>
-        <div className={styles.country}>
+        <div className={styles.country} id="Organization_Div">
           <input className={styles.countryChild} 
               type="text" 
               placeholder="Eduvos" 
               name="Organization" 
               id="Organization"
           />
-          <div className={styles.organization}>Organization</div>
+          <div className={styles.organization} >Organization</div>
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
         </div>
-        <div className={styles.country6}>
+        <div className={styles.country6} id="Qualifications_Div">
           <input className={styles.countryChild} 
               type="text" 
               placeholder="Bsc Information Technology" 
               name="Qualifications" 
               id="Qualifications"
           />
-          <div className={styles.courseName}>Qualifications</div>
+          <div className={styles.courseName} >Qualifications</div>
           {/* <img className={styles.buttonIcon} alt="" src="/button.svg" /> */}
         </div>
-        <div className={styles.country7}>
+        <div className={styles.country7} id="Industry_Div">
           <input className={styles.countryChild} 
               type="text" 
               placeholder="Teaching" 
@@ -356,20 +360,60 @@ const SetUp = () => {
         <form className={styles.mentorOrStudent}>
           <label className={styles.radio_label_1}>
               Student
-              <input type="radio" name="course" value="Student"/>
+              <input type="radio" name="Student_rd" id="Student_rd" value="Student" onClick={HideMentor}/>
           </label>
 
           <label className={styles.radio_label_2}>
               Mentor
-              <input type="radio" name="course" value="Mentor"/>
+              <input type="radio" name="Mentor_rd" id="Mentor_rd" value="Mentor" onClick={HideStudent}/>
           </label>
         </form>
-
-
-
+        
       </div>
     </div>
   );
 };
+
+
+function HideMentor(){
+    //hide divs
+    document.getElementById("Organization_Div").style.display = "none"
+    document.getElementById("Industry_Div").style.display = "none"
+    document.getElementById("Qualifications_Div").style.display = "none"
+    document.getElementById("Experience_Div").style.display = "none"
+    //uncheck radio button
+    document.getElementById("Mentor_rd").checked = false;
+
+    showStudent()//show student options
+}
+function showMentor(){
+  document.getElementById("Organization_Div").style.display = "Block"
+  document.getElementById("Industry_Div").style.display = "Block"
+  document.getElementById("Qualifications_Div").style.display = "Block"
+  document.getElementById("Experience_Div").style.display = "Block"
+  //uncheck radio button
+  document.getElementById("Mentor_rd").checked = true;
+
+}
+
+function HideStudent(){
+  //hide divs
+  document.getElementById("Campus_Div").style.display = "none"
+  document.getElementById("Year_Div").style.display = "none"
+  //uncheck radio button
+  document.getElementById("Student_rd").checked = false;
+
+  showMentor()//show mentor options
+}
+
+function showStudent(){
+  document.getElementById("Campus_Div").style.display = "Block"
+  document.getElementById("Year_Div").style.display = "Block"
+  //uncheck radio button
+  document.getElementById("Student_rd").checked = true;
+}
+
+//firstname, lastname, email, Campus, Course_Name, Year, Interest, Experience, Bio, Organization, Qualifications, Industry
+
 
 export default SetUp;

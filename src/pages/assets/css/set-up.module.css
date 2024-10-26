@@ -371,6 +371,7 @@
   box-sizing: border-box;
   width: 10.188rem;
   height: 3.25rem;
+  outline: none;
 }
 .input13,
 .lastName1 {
@@ -481,4 +482,8 @@
   font-size: var(--font-size-sm);
   color: var(--color-gray-500);
   font-family: var(--callout-medium);
+}
+
+.Hidden{
+  display: none;
 }
