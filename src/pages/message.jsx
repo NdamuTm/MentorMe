@@ -24,6 +24,12 @@ const Message = () => {
   const userId = auth.currentUser?.uid; 
 
   useEffect(() => {
+
+    function getImgbyId(id) {
+      const isMentor = query(collection(db, "userss"), where("u_id", "array-contains", id));
+      const chatsSnapshot =  getDocs(q);
+    }
+
     const fetchChats = async () => {
       try {
         if (!userId) return;

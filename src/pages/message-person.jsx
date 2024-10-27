@@ -9,11 +9,12 @@ const MessagePerson = () => {
   const params = new URLSearchParams(location.search);
   const senderId = params.get("senderId");
   const receiverId = params.get("receiverId");
+  const chatId = params.get("chat");
 
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-  const chatId = senderId < receiverId ? `${senderId}_${receiverId}` : `${receiverId}_${senderId}`;
+  // const chatId = senderId < receiverId ? `${senderId}_${receiverId}` : `${receiverId}_${senderId}`;
 
   useEffect(() => {
     const messagesRef = collection(db, "chats", chatId, "messages");

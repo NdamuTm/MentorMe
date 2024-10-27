@@ -8,6 +8,14 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
 
+  const params = new URLSearchParams(location.search);
+  const query = params.get("query");
+
+
+  if(query){
+    
+  }
+
   useEffect(() => {
     const fetchUsers = async () => {
       try {
