@@ -1,36 +1,30 @@
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, db } from "../config/firebase"; // Ensure the path is correct
 import styles from "./assets/css/message.module.css";
 
-const UserCard = ({ name, avatar, messagecontent,chatId,senderId,receiverId }) => (
-
+const UserCard = ({ avatar, messageContent, chatId, otherUserId, userName }) => (
   <div>
-
-      <Link to={"/chat?chat="+chatId+"&senderId="+senderId+"&receiverId="+receiverId} className={styles.div}>
-        <img className={styles.avatarIcon} alt="" src={avatar} />
-        <div className={styles.messageContent}>
-          <div className={styles.h1}>{name}</div>
-          <div className={styles.p}>{messagecontent}</div>
-        </div>
-        <div className={styles.notification}>2</div>
-      </Link>
+    <Link to={`/chat?chat=${chatId}&senderId=${auth.currentUser.uid}&receiverId=${otherUserId}`} className={styles.div}>
+      <img className={styles.avatarIcon} alt={userName} src={avatar} onError={(e) => e.target.src = "/default-avatar.png"} />
+      <div className={styles.messageContent}>
+        <div className={styles.h1}>{userName || "Unknown User"}</div>
+        <div className={styles.p}>{messageContent}</div>
+      </div>
+      <div className={styles.notification}>2</div>
+    </Link>
   </div>
 );
 
+
 const Message = () => {
   const [chats, setChats] = useState([]);
-  const [addMode, setAddMode] = useState([]);
-  const userId = auth.currentUser?.uid; 
+  const [userNames, setUserNames] = useState({});
+  const [userAvatars, setUserAvatars] = useState({});
+  const userId = auth.currentUser?.uid;
 
   useEffect(() => {
-
-    function getUserbyid(id) {
-      const isMentor = query(collection(db, "users"), where("u_id", "array-contains", id));
-      const chatsSnapshot =  getDocs(q);
-    }
-
     const fetchChats = async () => {
       try {
         if (!userId) return;
@@ -45,7 +39,26 @@ const Message = () => {
           ...doc.data()
         }));
 
-        setChats(chatsList);
+        // Fetch user names and avatars for each chat participant
+        const userIds = chatsList.flatMap(chat => chat.participants);
+        const uniqueUserIds = [...new Set(userIds)]; // Remove duplicates
+
+        const usersData = await Promise.all(uniqueUserIds.map(getUserById));
+        const names = Object.fromEntries(usersData.map(user => [user.u_id, user.name]));
+        const avatars = Object.fromEntries(usersData.map(user => [user.u_id, user.profilePic || "/default-avatar.png"]));
+        setUserNames(names);
+        setUserAvatars(avatars);
+
+        // Fetch last messages for each chat
+        const updatedChats = await Promise.all(chatsList.map(async (chat) => {
+          const lastMessage = await getLastMessage(chat.id);
+          return {
+            ...chat,
+            lastMessage
+          };
+        }));
+
+        setChats(updatedChats);
       } catch (error) {
         console.error("Error fetching chats: ", error);
       }
@@ -54,20 +67,37 @@ const Message = () => {
     fetchChats();
   }, [userId]);
 
+  // Fetch user data by ID
+  const getUserById = async (id) => {
+    const userRef = query(collection(db, "users"), where("u_id", "==", id));
+    const userSnapshot = await getDocs(userRef);
+    const userData = userSnapshot.docs.map(doc => doc.data());
+    return userData[0]; // Return the first user found
+  };
+
+  // Fetch the last message for a specific chat
+  const getLastMessage = async (chatId) => {
+    const messagesRef = collection(db, "chats", chatId, "messages");
+    const q = query(messagesRef, orderBy("timestamp", "desc"), limit(1));
+    const lastMessageSnapshot = await getDocs(q);
+    const lastMessageData = lastMessageSnapshot.docs.map(doc => ({ 
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    return lastMessageData.length > 0 ? lastMessageData[0] : null;
+  };
+
   return (
     <div className={styles.message}>
       <section className={styles.navigation}>
         <div className={styles.shadow} />
         <footer className={styles.navigationChild} />
-        <img
-          className={styles.navigationItem}
-          alt=""
-          src="/menuindicator@2x.png"
-        />
-        <div className={styles.link}>
+        <img className={styles.navigationItem} alt="" src="/menuindicator@2x.png" />
+        <Link to={"/"} className={styles.link}>
           <img className={styles.homeIcon} alt="" src="/home@2x.png" />
           <div className={styles.home}>Home</div>
-        </div>
+        </Link>
         <img className={styles.linkIcon} alt="" src="/link1@2x.png" />
         <div className={styles.link1}>
           <img className={styles.profileIcon} alt="" src="/profile@2x.png" />
@@ -83,17 +113,20 @@ const Message = () => {
         <img className={styles.linkIcon1} alt="" src="/chevronleft.svg" />
         <img className={styles.linkIcon2} alt="" src="/link2@2x.png" />
       </Link>
-      {chats.map((chat) => (
-        <UserCard
-          key={chat.id}
-          name={chat.participants.includes(userId) ? "Chat Partner" : "Unknown"}
-          avatar={chat.avatar || "/default-avatar.png"}
-          chatId={chat.id}
-          receiverId={chat.participants[0]}
-          senderId={chat.participants[1]}
-        />
-      ))}
-      <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />
+      {chats.map((chat) => {
+        // Determine the other user's ID
+        const otherUserId = chat.participants.find(participant => participant !== userId);
+        return (
+          <UserCard
+            key={chat.id}
+            avatar={userAvatars[otherUserId] || "/default-avatar.png"}
+            chatId={chat.id}
+            otherUserId={otherUserId}
+            userName={userNames[otherUserId] || "Unknown User"}
+            messageContent={chat.lastMessage ? chat.lastMessage.text : "No messages yet."}
+          />
+        );
+      })}
     </div>
   );
 };

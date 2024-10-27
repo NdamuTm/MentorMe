@@ -63,7 +63,7 @@ const Form = () => {
       });
 
       // Navigate to the chat page with the chat ID
-      navigate(`/chat/${chatDocRef.id}`);
+      navigate(`/chat?chat=${chatDocRef.id}&senderId=${formData.senderId}&receiverId=${formData.receiverId}`);
 
     } catch (err) {
       console.error("Error submitting application: ", err);
@@ -149,13 +149,6 @@ const Form = () => {
           />
         </div>
 
-        <section className={styles.cv}>
-          <div className={styles.input}>
-            <div className={styles.uploadHere}>Upload Here</div>
-            <img className={styles.icon} alt="" src="/icon@2x.png" />
-            <div className={styles.cvoptional}>CV(optional)</div>
-          </div>
-        </section>
 
         <button className={styles.button} type="submit" disabled={loading}>
           {loading ? "Applying..." : "Apply Now"}

@@ -14,7 +14,6 @@ const MessagePerson = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-
   useEffect(() => {
     const messagesRef = collection(db, "chats", chatId, "messages");
     const q = query(messagesRef, orderBy("timestamp", "asc"));
@@ -60,7 +59,10 @@ const MessagePerson = () => {
       <section className={styles.message}>
         <div className={styles.myMessage}>
           {messages.map((msg) => (
-            <div key={msg.id} className={styles.messageContainer}>
+            <div 
+              key={msg.id} 
+              className={`${styles.messageContainer} ${msg.senderId === senderId ? styles.sent : styles.received}`}
+            >
               <div className={styles.hello}>{msg.text}</div>
               <div className={styles.pm}>{msg.timestamp?.toDate().toLocaleTimeString() || "Sending..."}</div>
             </div>

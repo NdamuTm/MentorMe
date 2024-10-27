@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import styles from "./assets/css/applications.module.css";
 
 const Applications = () => {
   return (
     <div className={styles.applications}>
+      <Link to={"/"}>
       <img className={styles.headerIcon} alt="" src="/header2@2x.png" />
+      </Link>
       <div className={styles.yourApplications}>Your Applications</div>
       <div className={styles.facebook}>
         <div className={styles.facebookChild} />

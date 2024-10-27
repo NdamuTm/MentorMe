@@ -261,3 +261,30 @@
   font-family: var(--callout-medium);
   padding-top: 5rem;
 }
+
+
+
+.avatarIcon{
+  border-radius: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.messageContainer {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.received {
+  align-self: flex-start; 
+  background-color: #ffffff; 
+}
