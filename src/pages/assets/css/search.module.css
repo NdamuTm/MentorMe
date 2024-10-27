@@ -427,3 +427,18 @@
   height: 50.75rem;
   overflow: hidden;
 }
+
+
+.header {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 3rem; /* Adjust space below header as needed */
+}
+
+.heading {
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold; /* Make it bold */
+  color: var(--color-gray-800); /* Change color as needed */
+  margin-left: 1rem; /* Add margin if necessary */
+}

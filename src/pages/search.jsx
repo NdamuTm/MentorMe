@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { db } from "../config/firebase";
 import styles from "./assets/css/search.module.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const [users, setUsers] = useState([]);
@@ -74,7 +75,12 @@ const Search = () => {
   return (
     <div className={styles.search}>
       <main className={styles.headerParent}>
-        <img className={styles.headerIcon} alt="" src="/header4@2x.png" />
+      <div className={styles.header}>
+        <Link to="/" className={styles.headerLink}>
+          <img className={styles.headerIcon} alt="Back" src="/header4@2x.png" />
+        </Link>
+      </div>
+
         <div className={styles.searchBox}>
           <button className={styles.button}>
             <div className={styles.buttonChild} />
@@ -108,7 +114,7 @@ const Search = () => {
               />
             ))
           ) : (
-            <div className={styles.noResults}>No results found</div>
+            <div className={styles.noResults}>No results found...</div>
           )}
         </div>
       </main>
