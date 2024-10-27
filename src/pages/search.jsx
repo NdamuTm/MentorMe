@@ -9,18 +9,11 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
   
-  /// Location to get the URL 
-  const location = useLocation()
-
-  const params = new URLSearchParams(location.search);
-  const query = params.get("query");
-
-
-  if(query){
-    
-  }
+  // Location to get the URL 
+  const location = useLocation();
 
   useEffect(() => {
+    // Load users from Firestore once on mount
     const fetchUsers = async () => {
       try {
         const usersCollection = collection(db, "users");
@@ -37,40 +30,33 @@ const Search = () => {
     };
     fetchUsers();
 
-  }, []);
+    // Get search query from URL on mount
+    const query = new URLSearchParams(location.search).get("query");
+    if (query) {
+      setSearchTerm(query.toLowerCase()); // Normalize case for consistent filtering
+    }
+  }, [location]);
 
-
-    /// OnInit: Get the query from the URL and then pass it as a search term
-    useEffect(() => {
-      const query = new URLSearchParams(location.search).get("query");
-      if (query) {
-        setSearchTerm(query);
-      }
-    }, [location]);
-  
-
-    
-  const handleSearchChange = (event) => {
-    const term = event.target.value.toLowerCase();
-    setSearchTerm(term);
-
-    if (term) {
+  // Filter users when `searchTerm` or `users` changes
+  useEffect(() => {
+    if (searchTerm) {
       const results = users.filter((user) => {
         return (
-          (user.name || "").toLowerCase().includes(term) ||
-          (user.Campus || "").toLowerCase().includes(term) ||
-          (user.Qualification || "").toLowerCase().includes(term) ||
-          (user.experience || "").toLowerCase().includes(term) || // Add experience to search
-          (user.industry || "").toLowerCase().includes(term) // Add industry to search
+          (user.name || "").toLowerCase().includes(searchTerm) ||
+          (user.Campus || "").toLowerCase().includes(searchTerm) ||
+          (user.Qualification || "").toLowerCase().includes(searchTerm) ||
+          (user.experience || "").toLowerCase().includes(searchTerm) ||
+          (user.industry || "").toLowerCase().includes(searchTerm)
         );
       });
       setFilteredUsers(results);
     } else {
       setFilteredUsers(users); // Reset to all users if search is empty
     }
+  }, [searchTerm, users]);
 
-    console.log("Search term:", term);
-    console.log("Filtered users:", filteredUsers);
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
   };
 
   const UserCard = ({ name, Campus, Qualification, avatar }) => (
@@ -78,10 +64,9 @@ const Search = () => {
       <span className={styles.card_info}>
         <span className={styles.aneleNdlovu}>{name}</span>
         <div className={styles.group}>
-        <span className={styles.capeTown}>{Campus}</span> -
-        <span className={styles.uiuxDesign}>{Qualification}</span>
+          <span className={styles.capeTown}>{Campus}</span> -
+          <span className={styles.uiuxDesign}>{Qualification}</span>
         </div>
-
       </span>
     </div>
   );
@@ -110,17 +95,7 @@ const Search = () => {
         <div className={styles.availableMentors}>
           {filteredUsers.length} Available Mentors
         </div>
-        {/* <div className={styles.most}>
-          <button className={styles.button1}>
-            <div className={styles.buttonItem} />
-            <div className={styles.mostRelevent}>Most Relevant</div>
-          </button>
-          <button className={styles.button2}>
-            <div className={styles.buttonInner} />
-            <div className={styles.mostRecent}>Most Recent</div>
-          </button>
-        </div> */}
-        
+
         <div className={styles.dribbble}>
           {filteredUsers.length > 0 ? (
             filteredUsers.map((user) => (
