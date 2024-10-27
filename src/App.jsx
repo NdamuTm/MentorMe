@@ -6,6 +6,7 @@ import {
   useNavigationType,
 } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import { auth } from "./config/firebase.js";
 import Applications from "./pages/applications";
 import Form from "./pages/form";
 import Home from "./pages/home";
@@ -89,7 +90,7 @@ function App() {
       <Route path="/splash" element={<Splash />} />
       <Route path="/log-in" element={<LogIn />} />
       <Route path="/in-call" element={<InCall />} />
-      <Route path="/message-person" element={<MessagePerson />} />
+      <Route path="/chat" element={<MessagePerson />} />
       <Route path="/message" element={<Message />} />
       <Route path="/notification" element={<Notification1 />} />
       <Route path="/applications" element={<Applications />} />
@@ -102,6 +103,11 @@ function App() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/set-up" element={<SetUp />} />
+      <Route path="/" element={<Form />} />
+      <Route
+        path="/chat/:receiverId"
+        element={<MessagePerson senderId={auth.currentUser?.uid} />}
+      />
     </Routes>
   );
 }

@@ -1,6 +1,6 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserProfilePic } from "../components/profilePicgen.jsx";
 import { getMentors, getStudents } from "../services/dataService.js";
 import styles from "./assets/css/home.module.css";
@@ -20,8 +20,8 @@ const UserCard = ({ name, career, location, avatarSrc, onClick }) => (
   </div>
 );
 
-const RecentUserCard = ({ name, career, type, avatarSrc }) => (
-  <div className={styles.recentUserListChild}>
+const RecentUserCard = ({ name, career, type, avatarSrc, onClick }) => (
+  <div className={styles.recentUserListChild} onClick={onClick}>
     <div className={styles.recentTutorsImg}>
       <img className={styles.avatarIcon} alt={`${name}'s avatar`} src={avatarSrc} />
     </div>
@@ -39,8 +39,11 @@ const Home = () => {
   const [loadingMentors, setLoadingMentors] = useState(true);
   const [loadingStudents, setLoadingStudents] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
+  const [searchQuery, setSearchQuery] = useState(""); // New state for search query
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMentors = async () => {
@@ -79,20 +82,27 @@ const Home = () => {
         window.location.href ="/log-in";
       }
     });
-    console.log("Current user:", currentUser);
     return () => unsubscribe(); 
-    
   }, []);
 
   const senderId = currentUser ? currentUser.uid : null; 
 
   const handleMentorClick = (mentor) => {
-    console.log("Mentor clicked:", mentor); 
-    setSelectedMentor(mentor);
+    setSelectedUser({ ...mentor, type: 'mentor' });
   };
 
-  const closeMentorDetail = () => {
-    setSelectedMentor(null); 
+  const handleStudentClick = (student) => {
+    setSelectedUser({ ...student, type: 'student' });
+  };
+
+  const closeUserDetail = () => {
+    setSelectedUser(null); 
+  };
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
+    }
   };
 
   if (loadingMentors || loadingStudents) {
@@ -116,7 +126,6 @@ const Home = () => {
           </Link>
         </div>
         
-        {/* Search Box */}
         <div className={styles.searchBox}>
           <input
             className={styles.searchForTutors}
@@ -124,8 +133,10 @@ const Home = () => {
             id="search"
             placeholder="Search for Tutors Here..."
             type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className={styles.link2} id="search">
+          <button className={styles.link2} onClick={handleSearch}>
             <div className={styles.linkItem} />
             <img
               className={styles.adjustHorizontalAltIcon}
@@ -135,7 +146,6 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Popular Tutors Section */}
         <section className={styles.popularTutors}>
           <div className={styles.recentTutors}>Popular Tutors</div>
           <div className={styles.showAll}>Show All</div>
@@ -153,7 +163,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Recent Students Section */}
         <section className={styles.recent}>
           <div className={styles.recentTutors}>Recent Tutors</div>
           <div className={styles.showAll1}>Show All</div>
@@ -165,25 +174,24 @@ const Home = () => {
                 career={student.major || "N/A"}
                 type={student.year}
                 avatarSrc={student.profilePic}
+                onClick={() => handleStudentClick(student)}
               />
             ))}
           </div>
         </section>
       </div>
 
-      {/* Selected Mentor Detail Section */}
-      {selectedMentor && (
-  <div className={styles.selectedMentorDetail}>
-    <button onClick={closeMentorDetail}>Close</button>
-    <Apply
-      className={styles.apply}
-      senderId={senderId}
-      receiverId={selectedMentor.id}
-    />
-    
-  </div>
-)}
-
+      {selectedUser && (
+        <div className={styles.selectedMentorDetail}>
+          <button onClick={closeUserDetail}>Close</button>
+          <Apply
+            className={styles.apply}
+            senderId={senderId}
+            receiverId={selectedUser.id}
+            userType={selectedUser.type}
+          />
+        </div>
+      )}
 
       <section className={styles.navigation}>
         <div className={styles.shadow} />

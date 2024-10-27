@@ -1,10 +1,15 @@
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { db } from "../config/firebase";
 import styles from "./assets/css/message-person.module.css";
 
+const MessagePerson = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const senderId = params.get("senderId");
+  const receiverId = params.get("receiverId");
 
-const MessagePerson = ({ senderId, receiverId }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 

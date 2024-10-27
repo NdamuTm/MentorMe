@@ -12,12 +12,18 @@
     "@types/jest": "^29.5.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "agora-access-token": "^2.0.4",
+    "agora-rtc-sdk-ng": "^4.22.1",
     "bootstrap4-toggle": "^3.6.1",
+    "express": "^4.21.1",
     "firebase": "^11.0.1",
+    "firebase-admin": "^12.7.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.2.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {

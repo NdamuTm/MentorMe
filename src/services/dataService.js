@@ -112,8 +112,14 @@ export const createUser = async (userData) => {
   try {
     const docRef = doc(db, "users", userData.u_id);
     await setDoc(docRef, userData);
+    const userchat = doc(db, "userchats", userData.u_id);
+    console.log("User created successfully");
+    await setDoc(userchat, {
+        chats: []
+    });
     console.log("User created successfully");
   } catch (error) {
     console.error("Error creating student:", error);
   }
+
 };

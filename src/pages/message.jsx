@@ -1,6 +1,6 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { db } from "../config/firebase"; // Ensure the path is correct
+import { auth, db } from "../config/firebase"; // Ensure the path is correct
 import styles from "./assets/css/message.module.css";
 
 const UserCard = ({ name, avatar, messagecontent }) => (
@@ -13,26 +13,35 @@ const UserCard = ({ name, avatar, messagecontent }) => (
     <div className={styles.notification}>2</div>
   </div>
 );
+
 const Message = () => {
-  const [users, setUsers] = useState([]);
+  const [chats, setChats] = useState([]);
+  const [addMode, setAddMode] = useState([]);
+  const userId = auth.currentUser?.uid; 
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchChats = async () => {
       try {
-        const usersCollection = collection(db, "users");
-        const usersSnapshot = await getDocs(usersCollection);
-        const usersList = usersSnapshot.docs.map(doc => ({
+        if (!userId) return;
+
+        // Query to get chats where the user is either sender or receiver
+        const chatsRef = collection(db, "chats");
+        const q = query(chatsRef, where("participants", "array-contains", userId));
+
+        const chatsSnapshot = await getDocs(q);
+        const chatsList = chatsSnapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data()
         }));
-        setUsers(usersList);
+
+        setChats(chatsList);
       } catch (error) {
-        console.error("Error fetching users: ", error);
+        console.error("Error fetching chats: ", error);
       }
     };
 
-    fetchUsers();
-  }, []);
+    fetchChats();
+  }, [userId]);
 
   return (
     <div className={styles.message}>
@@ -58,23 +67,19 @@ const Message = () => {
           <div className={styles.home}>Setting</div>
         </div>
       </section>
-
       <div className={styles.header}>
         <div className={styles.message1}>Message</div>
         <img className={styles.linkIcon1} alt="" src="/chevronleft.svg" />
         <img className={styles.linkIcon2} alt="" src="/link2@2x.png" />
       </div>
-
-
-      {users.map((user) => (
+      {chats.map((chat) => (
         <UserCard
-          key={user.id}
-          name={user.name}
-          avatar={user.avatar || "/default-avatar.png"} 
-          messagecontent="Hi, how are you?"
+          key={chat.id}
+          name={chat.participants.includes(userId) ? "Chat Partner" : "Unknown"}
+          avatar={chat.avatar || "/default-avatar.png"}
+          messagecontent="Hi, how are you?" 
         />
       ))}
-
       <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />
     </div>
   );

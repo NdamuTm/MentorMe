@@ -16,7 +16,10 @@
 
 
 
-
+.groupt{
+  display: flex;
+  gap: 3rem;
+}
 
 
 .buttonChild,
@@ -271,7 +274,7 @@
 }
 .dribbble {
   position: absolute;
-  top: 22.125rem;
+  top: 11rem;
   left: 0;
   width: 20.938rem;
   /* height: 6.25rem; */
@@ -289,10 +292,16 @@
   flex-direction: column;
   width: 20rem;
   height: 5rem;
+  gap: 1rem;
 }
 .image_container{
   width : 4rem;
   height: 4rem;
+}
+
+.image_container img{
+  width: 3rem;
+  height: 3rem;
 }
 .image{
   width: 100%;

@@ -1,10 +1,14 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import { auth, db } from "../config/firebase";
 import styles from "./assets/css/form.module.css";
 
-
-const Form = ({ receiverId }) => {
+const Form = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const receiverId = new URLSearchParams(location.search).get("receiverId");
+  
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -17,7 +21,6 @@ const Form = ({ receiverId }) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
- 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -25,7 +28,6 @@ const Form = ({ receiverId }) => {
       [name]: value,
     }));
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,9 +41,18 @@ const Form = ({ receiverId }) => {
     }
 
     try {
+      // Create a new chat entry
+      const chatDocRef = await addDoc(collection(db, "chats"), {
+        participants: [formData.senderId, formData.receiverId],
+        messages: [],
+        createdAt: new Date(),
+      });
 
+      // Submit the mentorship application
       await addDoc(collection(db, "mentorshipApplications"), formData);
       alert("Application submitted successfully!");
+
+      // Reset the form data
       setFormData({
         firstname: "",
         lastname: "",
@@ -51,6 +62,10 @@ const Form = ({ receiverId }) => {
         senderId: auth.currentUser?.uid || "",
         receiverId: receiverId || "",
       });
+
+      // Navigate to the chat page with the chat ID
+      navigate(`/chat/${chatDocRef.id}`);
+
     } catch (err) {
       console.error("Error submitting application: ", err);
       setError("Failed to submit application. Try again.");
