@@ -2,11 +2,15 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../config/firebase";
 import styles from "./assets/css/search.module.css";
+import { useLocation } from "react-router-dom";
 
 const Search = () => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
+  
+  /// Location to get the URL 
+  const location = useLocation()
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -24,8 +28,20 @@ const Search = () => {
       }
     };
     fetchUsers();
+
   }, []);
 
+
+    /// OnInit: Get the query from the URL and then pass it as a search term
+    useEffect(() => {
+      const query = new URLSearchParams(location.search).get("query");
+      if (query) {
+        setSearchTerm(query);
+      }
+    }, [location]);
+  
+
+    
   const handleSearchChange = (event) => {
     const term = event.target.value.toLowerCase();
     setSearchTerm(term);
