@@ -1,16 +1,20 @@
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { auth, db } from "../config/firebase"; // Ensure the path is correct
 import styles from "./assets/css/message.module.css";
 
-const UserCard = ({ name, avatar, messagecontent }) => (
-  <div className={styles.div}>
-    <img className={styles.avatarIcon} alt="" src={avatar} />
-    <div className={styles.messageContent}>
-      <div className={styles.h1}>{name}</div>
-      <div className={styles.p}>{messagecontent}</div>
-    </div>
-    <div className={styles.notification}>2</div>
+const UserCard = ({ name, avatar, messagecontent,chatId }) => (
+
+  <div>
+      <Link to={"/chat/"+chatId} className={styles.div}>
+        <img className={styles.avatarIcon} alt="" src={avatar} />
+        <div className={styles.messageContent}>
+          <div className={styles.h1}>{name}</div>
+          <div className={styles.p}>{messagecontent}</div>
+        </div>
+        <div className={styles.notification}>2</div>
+      </Link>
   </div>
 );
 
@@ -28,7 +32,6 @@ const Message = () => {
         const chatsRef = collection(db, "chats");
         const q = query(chatsRef, where("participants", "array-contains", userId));
 
-  
         const chatsSnapshot = await getDocs(q);
         const chatsList = chatsSnapshot.docs.map(doc => ({
           id: doc.id,
@@ -74,13 +77,12 @@ const Message = () => {
         <img className={styles.linkIcon2} alt="" src="/link2@2x.png" />
       </div>
       {chats.map((chat) => (
-        
-        
         <UserCard
           key={chat.id}
           name={chat.participants.includes(userId) ? "Chat Partner" : "Unknown"}
           avatar={chat.avatar || "/default-avatar.png"}
- 
+          messagecontent="Hi, how are you?" 
+          chatId={chat.id}
         />
       ))}
       <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />
