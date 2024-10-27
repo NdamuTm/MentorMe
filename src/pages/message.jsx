@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import { auth, db } from "../config/firebase"; // Ensure the path is correct
 import styles from "./assets/css/message.module.css";
 
-const UserCard = ({ name, avatar, messagecontent,chatId }) => (
+const UserCard = ({ name, avatar, messagecontent,chatId,senderId,receiverId }) => (
 
   <div>
-      <Link to={"/chat/"+chatId} className={styles.div}>
+
+      <Link to={"/chat?chat="+chatId+"&senderId="+senderId+"&receiverId="+receiverId} className={styles.div}>
         <img className={styles.avatarIcon} alt="" src={avatar} />
         <div className={styles.messageContent}>
           <div className={styles.h1}>{name}</div>
@@ -24,6 +25,12 @@ const Message = () => {
   const userId = auth.currentUser?.uid; 
 
   useEffect(() => {
+
+    function getUserbyid(id) {
+      const isMentor = query(collection(db, "users"), where("u_id", "array-contains", id));
+      const chatsSnapshot =  getDocs(q);
+    }
+
     const fetchChats = async () => {
       try {
         if (!userId) return;
@@ -71,18 +78,19 @@ const Message = () => {
           <div className={styles.home}>Setting</div>
         </div>
       </section>
-      <div className={styles.header}>
+      <Link to={"/"} className={styles.header}>
         <div className={styles.message1}>Message</div>
         <img className={styles.linkIcon1} alt="" src="/chevronleft.svg" />
         <img className={styles.linkIcon2} alt="" src="/link2@2x.png" />
-      </div>
+      </Link>
       {chats.map((chat) => (
         <UserCard
           key={chat.id}
           name={chat.participants.includes(userId) ? "Chat Partner" : "Unknown"}
           avatar={chat.avatar || "/default-avatar.png"}
-          messagecontent="Hi, how are you?" 
           chatId={chat.id}
+          receiverId={chat.participants[0]}
+          senderId={chat.participants[1]}
         />
       ))}
       <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />

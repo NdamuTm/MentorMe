@@ -12,6 +12,14 @@ const Search = () => {
   /// Location to get the URL 
   const location = useLocation()
 
+  const params = new URLSearchParams(location.search);
+  const query = params.get("query");
+
+
+  if(query){
+    
+  }
+
   useEffect(() => {
     const fetchUsers = async () => {
       try {

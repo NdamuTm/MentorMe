@@ -1,6 +1,6 @@
 import { addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { db } from "../config/firebase";
 import styles from "./assets/css/message-person.module.css";
 
@@ -9,11 +9,11 @@ const MessagePerson = () => {
   const params = new URLSearchParams(location.search);
   const senderId = params.get("senderId");
   const receiverId = params.get("receiverId");
+  const chatId = params.get("chat");
 
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-  const chatId = senderId < receiverId ? `${senderId}_${receiverId}` : `${receiverId}_${senderId}`;
 
   useEffect(() => {
     const messagesRef = collection(db, "chats", chatId, "messages");
@@ -50,11 +50,10 @@ const MessagePerson = () => {
   return (
     <div className={styles.messagePerson}>
       <div className={styles.header}>
-        <button className={styles.link}>
+        <Link to={"/message"} className={styles.link}>
           <img className={styles.chevronLeftIcon} alt="Back Button" src="/chevronleft.svg" />
-        </button>
-        <img className={styles.avatarIcon} alt="User Avatar" src="/avatar5@2x.png" />
-        <div className={styles.rozanneBarrientes}>Anaya Sanji</div>
+        </Link>
+        
         <img className={styles.buttonIcon} alt="Call Button" src="/button7.svg" />
       </div>
 

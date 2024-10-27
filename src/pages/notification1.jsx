@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./assets/css/notification1.module.css";
-
 const Notification1 = () => {
   return (
     <div className={styles.notification}>
+      <Link to={"/"}>
       <img className={styles.headerIcon} alt="" src="/header1@2x.png" />
+      </Link>
       <div className={styles.div}>
         {/* <img className={styles.switchOffIcon} alt="" src="/switchoff.svg" /> */}
         <div className={styles.switchOffIcon}>
