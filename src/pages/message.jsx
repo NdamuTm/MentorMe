@@ -28,6 +28,7 @@ const Message = () => {
         const chatsRef = collection(db, "chats");
         const q = query(chatsRef, where("participants", "array-contains", userId));
 
+  
         const chatsSnapshot = await getDocs(q);
         const chatsList = chatsSnapshot.docs.map(doc => ({
           id: doc.id,
@@ -73,11 +74,13 @@ const Message = () => {
         <img className={styles.linkIcon2} alt="" src="/link2@2x.png" />
       </div>
       {chats.map((chat) => (
+        
+        
         <UserCard
           key={chat.id}
           name={chat.participants.includes(userId) ? "Chat Partner" : "Unknown"}
           avatar={chat.avatar || "/default-avatar.png"}
-          messagecontent="Hi, how are you?" 
+ 
         />
       ))}
       <img className={styles.buttonIcon} alt="" src="/button9@2x.png" />

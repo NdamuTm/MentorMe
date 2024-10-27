@@ -20,7 +20,6 @@ const Form = () => {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -44,7 +43,7 @@ const Form = () => {
       // Create a new chat entry
       const chatDocRef = await addDoc(collection(db, "chats"), {
         participants: [formData.senderId, formData.receiverId],
-        messages: [],
+        messages: [formData],
         createdAt: new Date(),
       });
 
