@@ -5,22 +5,22 @@ import {
   useLocation,
   useNavigationType,
 } from "react-router-dom";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
-import { auth } from "./config/firebase.js";
-import Applications from "./pages/applications";
-import Form from "./pages/form";
-import Home from "./pages/home";
-import InCall from "./pages/in-call";
-import LogIn from "./pages/log-in";
-import Menu from "./pages/menu";
-import Message from "./pages/message";
-import MessagePerson from "./pages/message-person";
-import Notification1 from "./pages/notification1";
-import Profile from "./pages/profile";
-import Search from "./pages/search";
-import SetUp from "./pages/set-up";
-import SignUp from "./pages/sign-up";
-import Splash from "./pages/splash";
+import ProtectedRoute from "/src/components/ProtectedRoute.jsx";
+import { auth } from "/src/config/firebase.js";
+import Applications from "/src/pages/applications.jsx";
+import Form from "/src/pages/form.jsx";
+import Home from "/src/pages/home.jsx";
+import InCall from "/src/pages/in-call.jsx";
+import LogIn from "/src/pages/log-in.jsx";
+import Menu from "/src/pages/menu.jsx";
+import MessagePerson from "/src/pages/message-person.jsx";
+import Message from "/src/pages/message.jsx";
+import Notification1 from "/src/pages/notification1.jsx";
+import Profile from "/src/pages/profile.jsx";
+import Search from "/src/pages/search.jsx";
+import SetUp from "/src/pages/set-up.jsx";
+import SignUp from "/src/pages/sign-up.jsx";
+import Splash from "/src/pages/splash.jsx";
 
 function App() {
   const action = useNavigationType();
