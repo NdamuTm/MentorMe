@@ -12,6 +12,7 @@ export default defineConfig({
       targets: [
         { src: "src", dest: "src" },
         { src: "public", dest: "public" },
+        { src: "node_modules", dest: "node_modules" },
       ],
     }),
   ],
