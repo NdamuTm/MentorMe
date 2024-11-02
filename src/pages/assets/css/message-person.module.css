@@ -227,6 +227,15 @@
 
 
 .messageContainer{
-  background: #9093a3;
-  padding: 1rem;
+  background: #4ca7a860;
+  border: 1px solid #4CA6A8;
+  padding: .5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pm{
+  font-size: 10px;
+  text-align: right;
+  
 }
