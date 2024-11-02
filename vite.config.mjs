@@ -1,20 +1,9 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
+  plugins: [react()],
   build: {
-    outDir: "build",
+    outDir: "dist",  // Set output directory
   },
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        { src: "src", dest: "src" },
-        { src: "public", dest: "public" },
-        { src: "node_modules", dest: "node_modules" },
-        
-      ],
-    }),
-  ],
 });
