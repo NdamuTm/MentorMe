@@ -79,7 +79,7 @@ const Home = () => {
         setCurrentUser(user);
       } else {
         setCurrentUser(null);
-        window.location.href ="/log-in";
+        // window.location.href ="/log-in";
       }
     });
     return () => unsubscribe(); 
